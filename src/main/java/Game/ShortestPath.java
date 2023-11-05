@@ -3,19 +3,19 @@ package Game;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
+/**
+ * A Class to generate the Shortest path
+ */
 public class ShortestPath {
 
+    /**
+     * An inner class to store the coordinate and direction of the current discovering vertex
+     */
     private static class Vertex {
-        /**
-         * An inner Class for recording the currently searching path
-         *
-         * @param x the column number of the vertex
-         * @param y the row number of the vertex
-         * @param Dir the direction of the topology associated with the vertex
-         */
         public final int x;
         public final int y;
         public final Direction Dir;
+
 
         public Vertex(int x, int y, Direction Dir) { //constructor
             this.x = x;
@@ -25,7 +25,18 @@ public class ShortestPath {
     }
 
     /**
-     * A Function to perform BFS for the shortest path between Tom and Jerry
+     * A Function to perform BFS for the shortest path between Tom and Jerry.
+     * It takes in a map, the current position of Tom, current position of jerry as an input
+     * It uses a queue to store the ready discovering vertex and use a 2D array to reccord the discovered note.
+     *
+     * The queue is initialed with the current position of the Tom
+     * The neighbour positions(within boundary and clear vertex) of Tom is added to the queue as the first generation of the seraching vertices.
+     * Each is initialized with its relative direction associated with Tom's direction, which will be passed to the next generation
+     * Then, the (n+1)th generation seraching vertices will be generated after the searching of nth generation vertices are completed
+     *
+     * This process is repeated until the current vertex of Jerry is serached.
+     * As a result, the direction toward the shortest path will be returned as the class Direction
+     *
      * @param map the 30*30 game map
      * @param cx  the current col-position of Tom
      * @param cy  the current row-position of Tom
@@ -71,9 +82,7 @@ public class ShortestPath {
     }
 }
 
-/**
- * The enum class for record the direction of the vertex in shortest path
- */
+
 enum Direction {//enum for storing enum
     UP(0, -1),
     DOWN(0, 1),
