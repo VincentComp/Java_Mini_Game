@@ -1,5 +1,9 @@
 package Game;
 
+/**
+ * Class
+ * Not yet type this
+ */
 public class Map {
     static int[][] map =
             {       {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
@@ -56,7 +60,6 @@ public class Map {
 
 
     public static void main(String[] args) {
-
 
 
 
