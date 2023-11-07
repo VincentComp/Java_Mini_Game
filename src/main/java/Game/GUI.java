@@ -1,25 +1,22 @@
 package Game;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
+import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import java.awt.Color;
+import java.awt.Dimension;
 
-public class GUI extends JPanel {
+public class GUI extends JFrame {
+	private static final int MAZE_SIZE = 30;
+	private static final int GRID_SIZE = 20; // Adjust this value to change the grid size
+
 	private int[][] maze;
-	private int cellSize;
-	private int dim;
-	public GUI(int[][] maze, int dim, int cellSize) {
+
+	public GUI(int[][] maze) {
 		this.maze = maze;
-		this.cellSize = cellSize;
-		this.dim = dim;
-		int width = maze[0].length * cellSize;
-		int height = maze.length * cellSize;
-		setPreferredSize(new Dimension(width, height));
+		paintMaze();
 	}
 
-	@Override
-	protected void paintComponent(Graphics g) {
+	private void paintMaze() {
 		// enum to increase readability
 		int Empty = 0;
 		int Wall = 1;
@@ -27,31 +24,30 @@ public class GUI extends JPanel {
 		int Jerry = 3;
 
 		// Loop through the whole maze to fill grids with the corresponding color
-		for (int row = 0; row < dim; row++) {
-			for (int col = 0; col < dim; col++) {
-				int cell = maze[row][col];
-				int x = col * cellSize;
-				int y = row * cellSize;
+		for (int i = 0; i < MAZE_SIZE; i++) {
+			for (int j = 0; j < MAZE_SIZE; j++) {
+				JPanel cell = new JPanel();
+				cell.setPreferredSize(new Dimension(GRID_SIZE, GRID_SIZE));
+				if (maze[i][j] == Wall) {
+					cell.setBackground(Color.GRAY);
+				}
+				else if(maze[i][j] == Empty) {
+					cell.setBackground(Color.WHITE);
+				}
+				else if(maze[i][j] == Tom) {
+					cell.setBackground(Color.BLUE);
+				}
+				else if(maze[i][j] == Jerry) {
+					cell.setBackground(Color.ORANGE);
+				}
 
-				if (cell == Wall) {
-					g.setColor(Color.GRAY);
-					g.fillRect(x, y, cellSize, cellSize);
-				}
-				else if (cell == Empty){
-					g.setColor(Color.WHITE);
-					g.fillRect(x, y, cellSize, cellSize);
-				}
-				else if (cell == Tom){
-					g.setColor(Color.BLUE);
-					//g.drawString("T",x,y);
-					g.fillRect(x, y, cellSize, cellSize);
-				}
-				else if (cell == Jerry){
-					g.setColor(Color.ORANGE);
-					//g.drawString("J",x,y);
-					g.fillRect(x, y, cellSize, cellSize);
-				}
+				add(cell);
 			}
 		}
+	}
+
+	// Update Maze
+	public void updateMaze(int maze[][]){
+		this.maze = maze;
 	}
 }
