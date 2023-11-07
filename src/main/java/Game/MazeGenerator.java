@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Stack;
-
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 class MazeGenerator {
     
     private Stack<Node> stack = new Stack<>();
@@ -21,6 +23,26 @@ class MazeGenerator {
                 maze[i][j] = 1;
     }
 
+    public void genCSV(){
+        String csvFile = "maze.csv";
+
+        try (FileWriter writer = new FileWriter(csvFile)) {
+            for (int[] rowData : maze) {
+                for (int i = 0; i < rowData.length; i++) {
+                    writer.append(String.valueOf(rowData[i]));
+                    if (i != rowData.length - 1) {
+                        writer.append(",");
+                    }
+                }
+                writer.append("\n");
+            }
+
+            System.out.println("CSV file created successfully.");
+        } catch (IOException e) {
+            System.out.println("Error writing CSV file: " + e.getMessage());
+        }
+
+    }
     public void generateMaze() {
         stack.push(new Node(1,1));
         while (!stack.empty()) {
