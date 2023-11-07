@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fa17fac-b429-4f72-969c-0409557ac260" name="Changes" comment="FunctionA v1.0">
+    <list default="true" id="2fa17fac-b429-4f72-969c-0409557ac260" name="Changes" comment="Add a .csv generator">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Game/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game/FuncATestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/FuncATestMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game/MazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/MazeGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,6 +79,43 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/Game" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Game" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.FuncATestMain">
+    <configuration name="FuncATestMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Game.FuncATestMain" />
+      <module name="Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Game.GUI" />
+      <module name="Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FuncATestMain" />
+        <item itemvalue="Application.GUI" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -141,7 +180,21 @@
       <option name="project" value="LOCAL" />
       <updated>1699363638679</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="FunctionA v1.1&#10;Add a .csv generator">
+      <created>1699366342843</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699366342843</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add a .csv generator">
+      <created>1699366551963</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699366551963</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -199,6 +252,8 @@
     <MESSAGE value="error in checkout(so commit)" />
     <MESSAGE value="FunctionA V1.0" />
     <MESSAGE value="FunctionA v1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="FunctionA v1.0" />
+    <MESSAGE value="FunctionA v1.1&#10;Add a .csv generator" />
+    <MESSAGE value="Add a .csv generator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a .csv generator" />
   </component>
 </project>

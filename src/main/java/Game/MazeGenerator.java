@@ -142,4 +142,8 @@ class MazeGenerator {
     private Boolean pointNotNode(Node node, int x, int y) {
         return !(x == node.x && y == node.y);
     }
+
+    public int[][] getMaze(){
+        return maze;
+    };
 }
