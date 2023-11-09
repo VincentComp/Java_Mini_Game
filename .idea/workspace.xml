@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2fa17fac-b429-4f72-969c-0409557ac260" name="Changes" comment="Add a GUI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/FuncATestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/FuncATestMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/GUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +35,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Master" />
+        <entry key="$PROJECT_DIR$" value="FunctionB" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,17 +61,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;FunctionB&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/waipangchan/Library/CloudStorage/OneDrive-HKUSTConnect/year 3 fall/COMP3111/Lab/Comp3111F23G18/src/main/java/Game&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Master",
+    "last_opened_file_path": "/Users/waipangchan/Library/CloudStorage/OneDrive-HKUSTConnect/year 3 fall/COMP3111/Lab/Comp3111F23G18/src/main/java/Game",
+    "run.code.analysis.last.selected.profile": "pProject Default"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/Game" />
@@ -82,7 +80,7 @@
       <recent name="Game" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FuncATestMain">
+  <component name="RunManager">
     <configuration name="FuncATestMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Game.FuncATestMain" />
       <module name="Project" />
@@ -111,8 +109,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GUI" />
         <item itemvalue="Application.FuncATestMain" />
         <item itemvalue="Application.GUI" />
+        <item itemvalue="Application.FuncATestMain" />
+        <item itemvalue="Application.FuncATestMain" />
       </list>
     </recent_temporary>
   </component>
@@ -204,27 +205,6 @@
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="Master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
@@ -246,6 +226,27 @@
                 </option>
               </RecentGroup>
             </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="Master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
