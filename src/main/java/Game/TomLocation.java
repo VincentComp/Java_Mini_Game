@@ -3,8 +3,8 @@ import java.util.ArrayList;
 import javax.swing.JFrame;
 public class TomLocation extends MovingObject {
 
-    TomLocation(Tuple position, Tuple ending_position, long s, int d) {
-        super(position, ending_position, s, d);
+    TomLocation(Tuple position, Tuple ending_position, GUI g, long s, int d) {
+        super(position, ending_position, g, s, d);
     }
 
     public void run(){

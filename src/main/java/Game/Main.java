@@ -28,14 +28,6 @@ public class Main {
 			}
 		}
 
-		// Initialize the location of Jerry
-		JerryLocation jerry = new JerryLocation(StartLocation, EndLocation, 500, 1);
-		jerry.start();
-
-		// Initialize the location of Tom
-		TomLocation tom = new TomLocation(EndLocation, EndLocation, 400, 0);
-		tom.start();
-
 		// GUI
 		GUI f1 = new GUI(maze.getMaze());
 
@@ -44,5 +36,13 @@ public class Main {
 		f1.setSize(300,300);
 		f1.setVisible(true);
 		f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		// Initialize the location of Jerry
+		JerryLocation jerry = new JerryLocation(StartLocation, EndLocation, f1, 500, 1);
+		jerry.start();
+
+		// Initialize the location of Tom
+		TomLocation tom = new TomLocation(EndLocation, EndLocation, f1,400, 0);
+		tom.start();
 	}
 }
