@@ -11,11 +11,6 @@ public class FuncATestMain {
         mazeGenerator.genCSV();
 
         GUI frame = new GUI(mazeGenerator.getMaze());
-        frame.setTitle("Tom and Jerry");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLayout(new GridLayout(30, 30));
-        frame.pack();
-        frame.setVisible(true);
 
         System.out.println("RAW MAZE\n" + mazeGenerator.getRawMaze());
         System.out.println("SYMBOLIC MAZE\n" + mazeGenerator.getSymbolicMaze());
