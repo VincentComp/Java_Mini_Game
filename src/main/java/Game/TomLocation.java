@@ -1,3 +1,4 @@
+package Game;
 import java.util.ArrayList;
 import javax.swing.JFrame;
 public class TomLocation extends MovingObject {
