@@ -80,11 +80,11 @@ class Window extends JFrame{
 		}
 
 		// passing this value to the controller
-		MovingObject Tom = new MovingObject(EndLocation, EndLocation, 400, 2);
-		Tom.start();
+		//MovingObject Tom = new MovingObject(EndLocation, EndLocation, 400, 2);
+		//Tom.start();
 
-		MovingObject Jerry = new MovingObject(StartLocation, EndLocation, 500, 1);
-		Jerry.start();
+		//MovingObject Jerry = new MovingObject(StartLocation, EndLocation, 500, 1);
+		//Jerry.start();
 
 		// Links the window to the keyboardlistenner.
 		this.addKeyListener((KeyListener) new KeyboardListener());
