@@ -5,12 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fa17fac-b429-4f72-969c-0409557ac260" name="Changes" comment="error in checkout(so commit)">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/MainGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/MainGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/ShortestPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/ShortestPath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game/DataOfSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/DataOfSquare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game/JerryLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/JerryLocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game/KeyboardListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/KeyboardListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game/MovingObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/MovingObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game/SquarePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/SquarePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game/ThreadsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/ThreadsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game/TomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/TomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game/TomLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/TomLocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game/Tuple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/Tuple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +46,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="FunctionB" />
+        <entry key="$PROJECT_DIR$" value="Master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,16 +72,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "FunctionB",
-    "run.code.analysis.last.selected.profile": "pProject Default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;FunctionB&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -129,6 +135,27 @@
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="Master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
@@ -150,27 +177,6 @@
                 </option>
               </RecentGroup>
             </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="Master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
           </value>
         </entry>
       </map>

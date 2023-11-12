@@ -1,3 +1,4 @@
+package Game;
 import java.util.ArrayList;
 
 // Controls all game logic .. most important part in this project.
@@ -95,12 +96,13 @@ public class MovingObject extends Thread {
     protected void checkEndGame(){
         int x = position.getX();
         int y = position.getY();
+        int ex = end_position.getX();
+        int ey = end_position.getY();
+
         if(Squares.get(x).get(y).color == 2 && Squares.get(x).get(y).color == 3){
             playerLoses();
         }
 
-        int ex = end_position.getX();
-        int ey = end_position.getY();
         else if(Squares.get(ex).get(ey).color == 3){
             playerWins();
         }

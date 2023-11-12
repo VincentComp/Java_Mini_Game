@@ -1,8 +1,10 @@
+package Game;
 import java.awt.GridLayout;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
 
 import javax.swing.JFrame;
+import javax.xml.crypto.Data;
 
 
 class Window extends JFrame{
@@ -10,9 +12,14 @@ class Window extends JFrame{
 	public static ArrayList<ArrayList<DataOfSquare>> Grid;
 	public static int width = 30;
 	public static int height = 30;
+
+	MazeGenerator maze;
 	public Window(){
-		
-		
+
+		// Generates a maze
+		maze = new MazeGenerator(height);
+		maze.generateMaze();
+
 		// Creates the arraylist that'll contain the threads
 		Grid = new ArrayList<ArrayList<DataOfSquare>>();
 		ArrayList<DataOfSquare> data;
@@ -21,8 +28,18 @@ class Window extends JFrame{
 		for(int i=0;i<width;i++){
 			data= new ArrayList<DataOfSquare>();
 			for(int j=0;j<height;j++){
-				DataOfSquare c = new DataOfSquare(2);
-				data.add(c);
+				if(i == 0 && maze.getMaze()[i][j] == 0){
+					DataOfSquare c = new DataOfSquare(3);
+					data.add(c);
+				}
+				else if (i == height-1 && maze.getMaze()[i][j] == 0){
+					DataOfSquare c = new DataOfSquare(2);
+					data.add(c);
+				}
+				else {
+					DataOfSquare c = new DataOfSquare(maze.getMaze()[i][j]);
+					data.add(c);
+				}
 			}
 			Grid.add(data);
 		}
@@ -34,6 +51,14 @@ class Window extends JFrame{
 		for(int i=0;i<width;i++){
 			for(int j=0;j<height;j++){
 				getContentPane().add(Grid.get(i).get(j).square);
+			}
+		}
+
+
+
+		for(int i = 0; i < height; i++){
+			for(int j = 0; j < height; j++){
+				Grid.get(i).get(j).color = maze.getMaze()[i][j];
 			}
 		}
 

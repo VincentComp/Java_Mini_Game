@@ -1,4 +1,5 @@
-public class Tuple { 
+package Game;
+public class Tuple {
 	  public  int x; 
 	  public  int y; 
 	  public int xf;
