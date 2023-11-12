@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fa17fac-b429-4f72-969c-0409557ac260" name="Changes" comment="error in checkout(so commit)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/DataOfSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/DataOfSquare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/JerryLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/JerryLocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/KeyboardListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/KeyboardListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/MovingObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/MovingObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/SquarePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/SquarePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/ThreadsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/ThreadsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/TomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/TomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/TomLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/TomLocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/Tuple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/Tuple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/Window.java" afterDir="false" />
-    </list>
+    <list default="true" id="2fa17fac-b429-4f72-969c-0409557ac260" name="Changes" comment="modified GUI to set properties inside constructor" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +33,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Master" />
+        <entry key="$PROJECT_DIR$" value="FunctionC" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -79,9 +66,52 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;FunctionB&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/waipangchan/Library/CloudStorage/OneDrive-HKUSTConnect/year 3 fall/COMP3111/Lab/Comp3111F23G18/src/main/java/Game&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/Game" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Game" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.FuncATestMain">
+    <configuration name="FuncATestMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Game.FuncATestMain" />
+      <module name="Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Game.GUI" />
+      <module name="Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FuncATestMain" />
+        <item itemvalue="Application.GUI" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -131,7 +161,56 @@
       <option name="project" value="LOCAL" />
       <updated>1699194192245</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="FunctionA V1.0">
+      <created>1699363399589</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699363399589</updated>
+    </task>
+    <task id="LOCAL-00007" summary="FunctionA v1.0">
+      <created>1699363638679</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699363638679</updated>
+    </task>
+    <task id="LOCAL-00008" summary="FunctionA v1.1&#10;Add a .csv generator">
+      <created>1699366342843</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699366342843</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add a .csv generator">
+      <created>1699366551963</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699366551963</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add a GUI">
+      <created>1699371684897</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1699371684897</updated>
+    </task>
+    <task id="LOCAL-00011" summary="modified GUI to set properties inside constructor">
+      <created>1699778482173</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1699778482173</updated>
+    </task>
+    <task id="LOCAL-00012" summary="modified GUI to set properties inside constructor">
+      <created>1699778515584</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1699778515584</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,7 +224,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Master" />
+                        <option value="FunctionC" />
                       </list>
                     </value>
                   </entry>
@@ -187,6 +266,23 @@
     <MESSAGE value="FunctionB :: Map" />
     <MESSAGE value="Finished testing pull" />
     <MESSAGE value="error in checkout(so commit)" />
-    <option name="LAST_COMMIT_MESSAGE" value="error in checkout(so commit)" />
+    <MESSAGE value="FunctionA V1.0" />
+    <MESSAGE value="FunctionA v1.0" />
+    <MESSAGE value="FunctionA v1.1&#10;Add a .csv generator" />
+    <MESSAGE value="Add a .csv generator" />
+    <MESSAGE value="Add a GUI" />
+    <MESSAGE value="modified GUI to set properties inside constructor" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified GUI to set properties inside constructor" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Game/FuncATestMain.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
