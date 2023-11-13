@@ -1,5 +1,7 @@
 package Game;
 import javax.swing.JFrame;
+import java.awt.event.KeyListener;
+import java.awt.*;
 
 public class Main {
 
@@ -33,12 +35,15 @@ public class Main {
 
 		//Setting up the window settings
 		f1.setTitle("Tom and Jerry");
-		f1.setSize(300,300);
+		//f1.setSize(300,300);
+		f1.setLayout(new GridLayout(30, 30));
+		f1.pack();
 		f1.setVisible(true);
 		f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		// Initialize the location of Jerry
 		JerryLocation jerry = new JerryLocation(StartLocation, EndLocation, f1, 500, 1);
+		JerryContrller j = new JerryContrller();
 		jerry.start();
 
 		// Initialize the location of Tom
