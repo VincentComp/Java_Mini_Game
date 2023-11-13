@@ -1,6 +1,8 @@
 package Game;
 // import java.util.ArrayList;
 
+import java.util.Currency;
+
 // Controls all game logic .. most important part in this project.
 // Idea basically the same as ThreadsController
 public class MovingObject extends Thread {
@@ -15,8 +17,9 @@ public class MovingObject extends Thread {
     // Constructor of Moving Object
     MovingObject(Tuple p, Tuple ending_position, GUI gui, long s, int d){
         // Squares = Window.Grid;
-        maze = gui.getMaze();
+
         g = gui;
+        maze = gui.getMaze();
         position = new Tuple(p.getX(), p.getY());
         end_position = new Tuple(ending_position.getX(), ending_position.getY());
         speed = s;
@@ -81,34 +84,45 @@ public class MovingObject extends Thread {
         int x = position.getX();
         int y = position.getY();
         int color = 0;
-        if(speed == 400) color = 3;
-        else if (speed == 500) color = 2;
+        if(speed == 400) color = 2;
+        else if (speed == 500) color = 3;
+        //System.out.println("Current Location : ");
+        //System.out.println(x);
+        //System.out.println(y);
         switch(direction){
             case 4:
+                if(y==29 || maze[y+1][x] == 1) break;
                 position.ChangeData(x, y+1);
-                maze[y][x] = 0;
-                maze[y+1][x] = color;
+                g.updateMaze(y, x, y+1, x, color);
+                //maze[y][x] = 0;
+                //maze[y+1][x] = color;
                 break;
 
             case 3:
+                if(y==0 || maze[y-1][x] == 1) break;
                 position.ChangeData(x, y-1);
-                maze[y][x] = 0;
-                maze[y-1][x] = color;
+                g.updateMaze(y,x,y-1,x,color);
+                //maze[y][x] = 0;
+                //maze[y-1][x] = color;
                 break;
 
             case 2:
+                if(x==0 || maze[y][x-1] == 1) break;
                 position.ChangeData(x-1, y);
-                maze[y][x] = 0;
-                maze[y][x-1] = color;
+                g.updateMaze(y,x,y,x-1,color);
+                //maze[y][x] = 0;
+                //maze[y][x-1] = color;
                 break;
 
             case 1:
+                if(x==29 || maze[y][x+1] == 1) break;
                 position.ChangeData(x+1, y);
-                maze[y][x] = 0;
-                maze[y][x+1] = color;
+                g.updateMaze(y,x,y,x+1,color);
+                //maze[y][x] = 0;
+                //maze[y][x+1] = color;
                 break;
         }
-        g.updateMaze(maze);
+        //g.updateMaze(maze);
     }
 
     protected void checkEndGame(){
@@ -121,7 +135,7 @@ public class MovingObject extends Thread {
             playerLoses();
         }
 
-        else if(maze[ey][ex] == 3){
+        else if(x == ex && y == ey){
             playerWins();
         }
     }

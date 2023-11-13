@@ -16,8 +16,18 @@ public class GUI extends JFrame {
 		paintMaze();
 	}
 
+	public GUI(int[][] maze, Tuple s, Tuple e){
+		this.maze = maze;
+		paintMaze();
+		// Initialize the location of Jerry
+		JerryLocation jerry = new JerryLocation(s, e, this, 500, 1);
+		jerry.start();
+		this.addKeyListener((KeyListener) new KeyboardListener());
+	}
+
 	private void paintMaze() {
 		// enum to increase readability
+		getContentPane().removeAll();
 		int Empty = 0;
 		int Wall = 1;
 		int Tom = 2;
@@ -44,12 +54,21 @@ public class GUI extends JFrame {
 				add(cell);
 			}
 		}
+		pack();
+		revalidate();
+		repaint();
 	}
 
 	// Update Maze
 	public void updateMaze(int maze[][]){
 
 		this.maze = maze;
+		//paintMaze();
+	}
+
+	public void updateMaze(int row, int col, int nrow, int ncol, int color){
+		maze[row][col] = 0;
+		maze[nrow][ncol] = color;
 		paintMaze();
 	}
 

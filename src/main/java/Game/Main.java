@@ -31,7 +31,7 @@ public class Main {
 		}
 
 		// GUI
-		GUI f1 = new GUI(maze.getMaze());
+		GUI f1 = new GUI(maze.getMaze(), StartLocation, EndLocation);
 
 		//Setting up the window settings
 		f1.setTitle("Tom and Jerry");
@@ -44,7 +44,7 @@ public class Main {
 		// Initialize the location of Jerry
 		//JerryLocation jerry = new JerryLocation(StartLocation, EndLocation, f1, 500, 1);
 		//jerry.start();
-		JerryContrller j = new JerryContrller(StartLocation, EndLocation, f1);
+		//JerryContrller j = new JerryContrller(StartLocation, EndLocation, f1);
 
 		// Initialize the location of Tom
 		//TomLocation tom = new TomLocation(EndLocation, EndLocation, f1,400, 0);
