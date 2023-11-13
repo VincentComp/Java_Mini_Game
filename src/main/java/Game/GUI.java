@@ -48,7 +48,9 @@ public class GUI extends JFrame {
 
 	// Update Maze
 	public void updateMaze(int maze[][]){
+
 		this.maze = maze;
+		paintMaze();
 	}
 
 	// Get Maze

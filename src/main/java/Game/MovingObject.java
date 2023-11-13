@@ -35,53 +35,54 @@ public class MovingObject extends Thread {
 
     // Check whether it collide with a wall
     // 1: Right, 2: Left, 3:Top, 4: Bottom
-    protected void checkWall(){
+    protected boolean checkWall(){
         int x = position.getX();
         int y = position.getY();
 
         switch(direction){
             case 4:
-                if(maze[y+1][x] == 1) {             // The below block is wall
-                    waitChangeDirection(4);
+                if(y == 29 || maze[y+1][x] == 1) {             // The below block is wall
+                    return true;
                 }
                 break;
 
             case 3:
-                if(maze[y-1][x] == 1) {             // The upper block is wall
-                    waitChangeDirection(3);
+                if(y == 0 || maze[y-1][x] == 1) {             // The upper block is wall
+                    return true;
                 }
                 break;
 
             case 2:
                 if(x == 0 || maze[y][x-1] == 1) {   // The left block is wall or out of boundary
-                    waitChangeDirection(2);
+                    return true;
                 }
                 break;
 
             case 1:
-                if(maze[y][x+1] == 1) {             // The right block is wall
-                    waitChangeDirection(1);
+                if(x == 29 || maze[y][x+1] == 1) {             // The right block is wall
+                    return true;
                 }
                 break;
         }
+        return false;
     }
 
     protected void waitChangeDirection(int old_direction){
         while(true){
+            pauser();
             if(old_direction != direction){
                 break;
             }
         }
-        checkWall();
     }
 
     protected void move(){
+
         int x = position.getX();
         int y = position.getY();
         int color = 0;
         if(speed == 400) color = 3;
         else if (speed == 500) color = 2;
-
         switch(direction){
             case 4:
                 position.ChangeData(x, y+1);
@@ -107,7 +108,6 @@ public class MovingObject extends Thread {
                 maze[y][x+1] = color;
                 break;
         }
-
         g.updateMaze(maze);
     }
 
