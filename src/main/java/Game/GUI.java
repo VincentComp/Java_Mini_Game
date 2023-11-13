@@ -1,8 +1,9 @@
 package Game;
-import java.awt.*;
 import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import java.awt.Color;
+import java.awt.Dimension;
 
 public class GUI extends JFrame {
 	private static final int MAZE_SIZE = 30;
@@ -12,15 +13,21 @@ public class GUI extends JFrame {
 
 	public GUI(int[][] maze) {
 		this.maze = maze;
-		setTitle("Tom and Jerry");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setLayout(new GridLayout(30, 30));
-		setVisible(true);
 		paintMaze();
+	}
+
+	public GUI(int[][] maze, Tuple s, Tuple e){
+		this.maze = maze;
+		paintMaze();
+		// Initialize the location of Jerry
+		JerryLocation jerry = new JerryLocation(s, e, this, 500, 1);
+		jerry.start();
+		this.addKeyListener((KeyListener) new KeyboardListener());
 	}
 
 	private void paintMaze() {
 		// enum to increase readability
+		getContentPane().removeAll();
 		int Empty = 0;
 		int Wall = 1;
 		int Tom = 2;
@@ -48,12 +55,20 @@ public class GUI extends JFrame {
 			}
 		}
 		pack();
+		revalidate();
+		repaint();
 	}
 
 	// Update Maze
 	public void updateMaze(int maze[][]){
 
 		this.maze = maze;
+		//paintMaze();
+	}
+
+	public void updateMaze(int row, int col, int nrow, int ncol, int color){
+		maze[row][col] = 0;
+		maze[nrow][ncol] = color;
 		paintMaze();
 	}
 
