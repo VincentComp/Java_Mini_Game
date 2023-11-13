@@ -9,10 +9,14 @@ public class TomLocation extends MovingObject {
 
     public void run(){
         while(true){
-            checkWall();
-            move();
-            checkEndGame();
-            pauser();
+            if(checkWall()){        // If moving in the current direction will go to a wall
+                waitChangeDirection(direction);
+            }
+            else{
+                move();
+                checkEndGame();
+                pauser();
+            }
         }
     }
 }

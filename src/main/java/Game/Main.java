@@ -42,12 +42,12 @@ public class Main {
 		f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		// Initialize the location of Jerry
-		JerryLocation jerry = new JerryLocation(StartLocation, EndLocation, f1, 500, 1);
-		JerryContrller j = new JerryContrller();
-		jerry.start();
+		//JerryLocation jerry = new JerryLocation(StartLocation, EndLocation, f1, 500, 1);
+		//jerry.start();
+		JerryContrller j = new JerryContrller(StartLocation, EndLocation, f1);
 
 		// Initialize the location of Tom
-		TomLocation tom = new TomLocation(EndLocation, EndLocation, f1,400, 0);
-		tom.start();
+		//TomLocation tom = new TomLocation(EndLocation, EndLocation, f1,400, 0);
+		//tom.start();
 	}
 }
