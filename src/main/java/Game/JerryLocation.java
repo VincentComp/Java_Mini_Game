@@ -15,10 +15,16 @@ public class JerryLocation extends MovingObject {
                 waitChangeDirection(direction);
             }
             else{
-                move();
-                checkEndGame();
-                pauser();
+                //move();
+                //checkEndGame();
+                //pauser();
             }
         }
+    }
+
+    public static void clicked(){
+        move();
+        checkEndGame();
+
     }
 }
