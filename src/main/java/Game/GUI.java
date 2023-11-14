@@ -6,7 +6,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 
 public class GUI extends JFrame {
-	public JPanel[][] cell;
+	public JPanel cell[][];
 	private static final int MAZE_SIZE = 30;
 	private static final int GRID_SIZE = 20; // Adjust this value to change the grid size
 
@@ -23,16 +23,9 @@ public class GUI extends JFrame {
 		cell = new JPanel[30][30];
 		paintMaze();
 		// Initialize the location of Jerry
-		JerryLocation jerry = new JerryLocation(s, e, this, 1);
+		JerryLocation jerry = new JerryLocation(s, e, this, 500);
 		jerry.start();
 		this.addKeyListener((KeyListener) new KeyboardListener());
-
-		// Initialize the location of Tom
-		TomLocation tom = new TomLocation(e, this,100, 2);
-		tom.start();
-
-		TomController tomControl = new TomController(this, jerry, tom);
-		tomControl.start();
 	}
 
 	private void paintMaze() {
@@ -71,18 +64,19 @@ public class GUI extends JFrame {
 	}
 
 	// Update Maze
-	public void updateMaze(int[][] maze){
+	public void updateMaze(int maze[][]){
 
 		this.maze = maze;
-		paintMaze();
+		//paintMaze();
 	}
 
-	public void updateMaze(int row, int col, int new_row, int new_col, int color){
+	public void updateMaze(int row, int col, int nrow, int ncol, int color){
 		maze[row][col] = 0;
-		maze[new_row][new_col] = color;
+		maze[nrow][ncol] = color;
+
 		cell[row][col].setBackground(Color.WHITE);
-		if(color == 2) cell[new_row][new_col].setBackground(Color.BLUE);
-		if(color == 3) cell[new_row][new_col].setBackground(Color.ORANGE);
+		cell[nrow][ncol].setBackground(Color.ORANGE);
+		//paintMaze();
 	}
 
 	// Get Maze
