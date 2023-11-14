@@ -23,7 +23,7 @@ public class GUI extends JFrame {
 		cell = new JPanel[30][30];
 		paintMaze();
 		// Initialize the location of Jerry
-		JerryLocation jerry = new JerryLocation(s, e, this, 500, 1);
+		JerryLocation jerry = new JerryLocation(s, e, this, 500);
 		jerry.start();
 		this.addKeyListener((KeyListener) new KeyboardListener());
 	}
