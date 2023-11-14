@@ -1,47 +1,31 @@
 package Game;
-import java.util.ArrayList;
-import javax.swing.JFrame;
-public class TomLocation extends Thread {
 
+
+public class TomLocation{
     static int[][] maze;
     static GUI gui;
     static Tuple position;
-    static long speed;
+    //static Tuple end_position;
     public static int direction;
 
-    TomLocation(Tuple p, GUI g, long s, int d) {
+
+    TomLocation(Tuple starting_position, Tuple ending_position, GUI g, int d) {
+        maze = g.getMaze();
         gui = g;
-        maze = gui.getMaze();
-        position = new Tuple(p.getX(), p.getY());
-        speed = s;
+        position = ending_position;
+        //end_position = ending_position;
         direction = d;
     }
 
-    public void run(){
-        while(true){
-            maze = gui.getMaze();
-            if(checkWall()){        // If moving in the current direction will go to a wall
-                waitChangeDirection(direction);
-            }
-            else{
-                move();
-                pauser();
-            }
-        }
+
+
+    /*
+    public static void clicked(){
+        if(!checkWall())
+            move();
+        checkEndGame();
     }
 
-    // Delay between each move of the moving object
-    protected static void pauser(){
-        try{
-            sleep(speed);
-        }
-        catch(InterruptedException e){
-            e.printStackTrace();
-        }
-    }
-
-    // Check whether it collide with a wall
-    // 1: Right, 2: Left, 3:Top, 4: Bottom
     protected static boolean checkWall(){
         int x = position.getX();
         int y = position.getY();
@@ -72,56 +56,91 @@ public class TomLocation extends Thread {
                 break;
         }
         return false;
-    }
+    }*/
 
-    protected void waitChangeDirection(int old_direction){
-        while(old_direction == direction){
-            pauser();
-        }
-    }
 
     // 1: Right, 2: Left, 3:Top, 4: Bottom
     protected static void move(){
+        if(GUI.Tom_lock == 0) {
 
-        int x = position.getX();
-        int y = position.getY();
-        int color = 2;
 
-        switch(direction){
-            case 4:
-                if(maze[y+1][x] == 3) playerLoses();
-                position.ChangeData(x, y+1);
-                gui.updateMaze(y, x, y+1, x, color);
-                break;
+            switch (ShortestPath.get_Path(maze, position.getX(), position.getY(), JerryLocation.position.getX(), JerryLocation.position.getY())) {
+                case UP:
+                    direction = 3;
+                    break;
+                case DOWN:
+                    direction = 4;
+                    break;
+                case LEFT:
+                    direction = 2;
+                    break;
+                case RIGHT:
+                    direction = 1;
+                    break;
+            }
 
-            case 3:
-                if(maze[y-1][x] == 3) playerLoses();
-                position.ChangeData(x, y-1);
-                gui.updateMaze(y,x,y-1,x,color);
-                break;
 
-            case 2:
-                if(maze[y][x-1] == 3) playerLoses();
-                position.ChangeData(x-1, y);
-                gui.updateMaze(y,x,y,x-1,color);
-                break;
+            int x = position.getX();
+            int y = position.getY();
+            int color = 2;          // Color for Tom
 
-            case 1:
-                if(maze[y][x+1] == 3) playerLoses();
-                position.ChangeData(x+1, y);
-                gui.updateMaze(y,x,y,x+1,color);
-                break;
+            switch (direction) {
+                case 4:
+                    if (maze[y + 1][x] == 3) playerLoses();
+                    position.ChangeData(x, y + 1);            // Move up
+                    gui.updateMaze(y, x, y + 1, x, color);
+                    break;
+
+                case 3:
+                    if (maze[y - 1][x] == 3) playerLoses();
+                    position.ChangeData(x, y - 1);            // Move down
+                    gui.updateMaze(y, x, y - 1, x, color);
+                    break;
+
+                case 2:
+                    if (maze[y][x - 1] == 3) playerLoses();
+                    position.ChangeData(x - 1, y);            // Move left
+                    gui.updateMaze(y, x, y, x - 1, color);
+                    break;
+
+                case 1:
+                    if (maze[y][x + 1] == 3) playerLoses();
+                    position.ChangeData(x + 1, y);            // Move right
+                    gui.updateMaze(y, x, y, x + 1, color);
+                    break;
+            }
+
+            checkEndGame();
         }
+    }
+
+
+
+    protected static void checkEndGame(){
+        int x = JerryLocation.position.getX();
+        int y = JerryLocation.position.getY();
+        int ex = JerryLocation.end_position.getX();
+        int ey = JerryLocation.end_position.getY();
+
+
+
+        if(x == ex && y == ey){
+            playerWins();
+        }
+    }
+
+    protected static void playerWins(){
+        System.out.println("You Win!");
+        GUI.Jerry_lock =1;
+        GUI.Tom_lock = 1;
+
     }
 
     protected static void playerLoses(){
         System.out.println("You Lose!");
-        while(true){
-            pauser();
-        }
-    }
-    public void changeDirection(int d){
-        direction = d;
+        GUI.Jerry_lock =1;
+        GUI.Tom_lock = 1;
+
     }
 
     public Tuple getPosition(){

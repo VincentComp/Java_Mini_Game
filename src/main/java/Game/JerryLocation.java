@@ -1,8 +1,7 @@
 package Game;
 
-import javax.swing.text.Position;
-import java.util.ArrayList;
-public class JerryLocation extends Thread {
+
+public class JerryLocation{
     static int[][] maze;
     static GUI gui;
     static Tuple position;
@@ -13,20 +12,16 @@ public class JerryLocation extends Thread {
         maze = g.getMaze();
         gui = g;
         position = starting_position;
-        end_position = ending_position;
+        end_position = new Tuple(ending_position.getX(),ending_position.getY());
         direction = d;
     }
 
-    public void run(){
-        while(true){
-            gui.getMaze();
-        }
-    }
+
 
     public static void clicked(){
         if(!checkWall())
             move();
-            checkEndGame();
+            TomLocation.checkEndGame();
     }
 
     protected static boolean checkWall(){
@@ -70,44 +65,48 @@ public class JerryLocation extends Thread {
 
         switch(direction){
             case 4:
-                if(maze[y+1][x] == 2) playerLoses();
+                if(maze[y+1][x] == 2) TomLocation.playerLoses();
                 position.ChangeData(x, y+1);            // Move up
                 gui.updateMaze(y, x, y+1, x, color);
                 break;
 
             case 3:
-                if(maze[y-1][x] == 2) playerLoses();
+                if(maze[y-1][x] == 2) TomLocation.playerLoses();
                 position.ChangeData(x, y-1);            // Move down
                 gui.updateMaze(y,x,y-1,x,color);
                 break;
 
             case 2:
-                if(maze[y][x-1] == 2) playerLoses();
+                if(maze[y][x-1] == 2) TomLocation.playerLoses();
                 position.ChangeData(x-1, y);            // Move left
                 gui.updateMaze(y,x,y,x-1,color);
                 break;
 
             case 1:
-                if(maze[y][x+1] == 2) playerLoses();
+                if(maze[y][x+1] == 2) TomLocation.playerLoses();
                 position.ChangeData(x+1, y);            // Move right
                 gui.updateMaze(y,x,y,x+1,color);
                 break;
         }
     }
 
+    /*
+
     protected static void checkEndGame(){
-        int x = position.getX();
-        int y = position.getY();
-        int ex = end_position.getX();
-        int ey = end_position.getY();
+        int x = JerryLocation.position.getX();
+        int y = JerryLocation.position.getY();
+        int ex = JerryLocation.end_position.getX();
+        int ey = JerryLocation.end_position.getY();
 
         if(x == ex && y == ey){
             playerWins();
         }
     }
 
+
     protected static void playerWins(){
         System.out.println("You Win!");
+        GUI.Jerry_lock =1;
         while(true){
             try{
                 sleep(500);
@@ -118,8 +117,10 @@ public class JerryLocation extends Thread {
         }
     }
 
+
     protected static void playerLoses(){
-        //System.out.println("You Lose!");
+        System.out.println("You Lose!");
+
         while(true){
             try{
                 sleep(500);
@@ -129,6 +130,8 @@ public class JerryLocation extends Thread {
             }
         }
     }
+
+    */
 
     public Tuple getPosition(){
         return position;

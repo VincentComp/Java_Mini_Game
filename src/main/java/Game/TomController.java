@@ -1,3 +1,4 @@
+/*
 package Game;
 
 public class TomController extends Thread{
@@ -53,3 +54,4 @@ public class TomController extends Thread{
         return true;
     }
 }
+*/
