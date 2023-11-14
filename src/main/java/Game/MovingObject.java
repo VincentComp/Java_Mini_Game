@@ -79,6 +79,7 @@ public class MovingObject extends Thread {
         }
     }
 
+    // 1: Right, 2: Left, 3:Top, 4: Bottom
     protected static void move(){
 
         int x = position.getX();
@@ -86,43 +87,32 @@ public class MovingObject extends Thread {
         int color = 0;
         if(speed == 400) color = 2;
         else if (speed == 500) color = 3;
-        //System.out.println("Current Location : ");
-        //System.out.println(x);
-        //System.out.println(y);
+
         switch(direction){
             case 4:
-                if(y==29 || maze[y+1][x] == 1) break;
+                //if(y==29 || maze[y+1][x] == 1) break;
                 position.ChangeData(x, y+1);
                 g.updateMaze(y, x, y+1, x, color);
-                //maze[y][x] = 0;
-                //maze[y+1][x] = color;
                 break;
 
             case 3:
-                if(y==0 || maze[y-1][x] == 1) break;
+                //if(y==0 || maze[y-1][x] == 1) break;
                 position.ChangeData(x, y-1);
                 g.updateMaze(y,x,y-1,x,color);
-                //maze[y][x] = 0;
-                //maze[y-1][x] = color;
                 break;
 
             case 2:
-                if(x==0 || maze[y][x-1] == 1) break;
+                //if(x==0 || maze[y][x-1] == 1) break;
                 position.ChangeData(x-1, y);
                 g.updateMaze(y,x,y,x-1,color);
-                //maze[y][x] = 0;
-                //maze[y][x-1] = color;
                 break;
 
             case 1:
-                if(x==29 || maze[y][x+1] == 1) break;
+                //if(x==29 || maze[y][x+1] == 1) break;
                 position.ChangeData(x+1, y);
                 g.updateMaze(y,x,y,x+1,color);
-                //maze[y][x] = 0;
-                //maze[y][x+1] = color;
                 break;
         }
-        //g.updateMaze(maze);
     }
 
     protected static void checkEndGame(){
@@ -135,14 +125,14 @@ public class MovingObject extends Thread {
             playerLoses();
         }
 
-        else if(x == ex && y == ey){
+        else if(x == ex && y == ey && speed == 500){
             playerWins();
         }
     }
 
     protected static void playerWins(){
         System.out.println("You Win!");
-        move();
+        g.updateMaze(maze);
         while(true){
             pauser();
         }
@@ -154,5 +144,7 @@ public class MovingObject extends Thread {
         }
     }
 
-
+    public Tuple getPosition(){
+        return position;
+    }
 }
