@@ -1,10 +1,10 @@
 package Game;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+//import java.util.Arrays;
 import java.util.Random;
 import java.util.Stack;
-import java.io.BufferedWriter;
+//import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 class MazeGenerator {
@@ -56,7 +56,7 @@ class MazeGenerator {
         }
         for(int i = 1; i<dimension-1;i++){
             for(int j = 1; j<dimension-1;j++){
-                if(rand.nextFloat()>0.3)
+                if(rand.nextFloat()>0.93)//
                     maze[j][i] = 0;
             }
         }
@@ -78,15 +78,15 @@ class MazeGenerator {
         maze[end.get(rand.nextInt(end.size()))][dimension-1]=0;
     }
 
-    public String getRawMaze() {
+    /*public String getRawMaze() {
         StringBuilder sb = new StringBuilder();
         for (int[] row : maze) {
             sb.append(Arrays.toString(row) + "\n");
         }
         return sb.toString();
-    }
+    }*/
 
-    public String getSymbolicMaze() {
+    /*public String getSymbolicMaze() {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < dimension; i++) {
             for (int j = 0; j < dimension; j++) {
@@ -96,7 +96,7 @@ class MazeGenerator {
             sb.append("\n");
         }
         return sb.toString();
-    }
+    }*/
 
     private boolean validNextNode(Node node) {
         int numNeighboringOnes = 0;

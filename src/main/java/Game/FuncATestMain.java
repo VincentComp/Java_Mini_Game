@@ -12,7 +12,7 @@ public class FuncATestMain {
 
         GUI frame = new GUI(mazeGenerator.getMaze());
 
-        System.out.println("RAW MAZE\n" + mazeGenerator.getRawMaze());
-        System.out.println("SYMBOLIC MAZE\n" + mazeGenerator.getSymbolicMaze());
+        //System.out.println("RAW MAZE\n" + mazeGenerator.getRawMaze());
+        //System.out.println("SYMBOLIC MAZE\n" + mazeGenerator.getSymbolicMaze());
     }
 }
