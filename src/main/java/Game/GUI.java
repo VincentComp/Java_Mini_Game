@@ -6,6 +6,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 
 public class GUI extends JFrame {
+	public JPanel cell[][];
 	private static final int MAZE_SIZE = 30;
 	private static final int GRID_SIZE = 20; // Adjust this value to change the grid size
 
@@ -13,11 +14,13 @@ public class GUI extends JFrame {
 
 	public GUI(int[][] maze) {
 		this.maze = maze;
+		cell = new JPanel[30][30];
 		paintMaze();
 	}
 
 	public GUI(int[][] maze, Tuple s, Tuple e){
 		this.maze = maze;
+		cell = new JPanel[30][30];
 		paintMaze();
 		// Initialize the location of Jerry
 		JerryLocation jerry = new JerryLocation(s, e, this, 500, 1);
@@ -36,22 +39,23 @@ public class GUI extends JFrame {
 		// Loop through the whole maze to fill grids with the corresponding color
 		for (int i = 0; i < MAZE_SIZE; i++) {
 			for (int j = 0; j < MAZE_SIZE; j++) {
-				JPanel cell = new JPanel();
-				cell.setPreferredSize(new Dimension(GRID_SIZE, GRID_SIZE));
+				//JPanel cell = new JPanel();
+				cell[i][j] = new JPanel();
+				cell[i][j].setPreferredSize(new Dimension(GRID_SIZE, GRID_SIZE));
 				if (maze[i][j] == Wall) {
-					cell.setBackground(Color.GRAY);
+					cell[i][j].setBackground(Color.GRAY);
 				}
 				else if(maze[i][j] == Empty) {
-					cell.setBackground(Color.WHITE);
+					cell[i][j].setBackground(Color.WHITE);
 				}
 				else if(maze[i][j] == Tom) {
-					cell.setBackground(Color.BLUE);
+					cell[i][j].setBackground(Color.BLUE);
 				}
 				else if(maze[i][j] == Jerry) {
-					cell.setBackground(Color.ORANGE);
+					cell[i][j].setBackground(Color.ORANGE);
 				}
 
-				add(cell);
+				add(cell[i][j]);
 			}
 		}
 		pack();
@@ -69,7 +73,10 @@ public class GUI extends JFrame {
 	public void updateMaze(int row, int col, int nrow, int ncol, int color){
 		maze[row][col] = 0;
 		maze[nrow][ncol] = color;
-		paintMaze();
+
+		cell[row][col].setBackground(Color.WHITE);
+		cell[nrow][ncol].setBackground(Color.ORANGE);
+		//paintMaze();
 	}
 
 	// Get Maze
