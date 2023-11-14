@@ -125,7 +125,7 @@ public class MovingObject extends Thread {
         //g.updateMaze(maze);
     }
 
-    protected static void checkEndGame(){
+    static void checkEndGame(){
         int x = position.getX();
         int y = position.getY();
         int ex = end_position.getX();
