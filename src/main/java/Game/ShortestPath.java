@@ -44,17 +44,15 @@ public class ShortestPath {
      * @param my  the current row-position of Jerry
      * @return The direction of the shortest path from Tom
      */
-    public static Direction get_Path(int[][] map, int cx, int cy, int mx, int my) {
-        /**
-         * @param queue The ready queue for storing the future searching vertex
-         * @param discovered The hidden layer of teh map storing the discovered vertex
-         */
+    public static Direction get_Direction(int[][] map, int cx, int cy, int mx, int my) {
         Queue<Vertex> queue = new ArrayDeque<>();
         boolean[][] discovered = new boolean[30][30];
 
 
+
         discovered[cy][cx] = true; //set initial Vertex to be discovered
         queue.add(new Vertex(cx, cy, null));//add initial Vertex to the queue
+
 
         while (!queue.isEmpty()) {
             Vertex Vertex = queue.poll(); //pop the Vertex from the front of the queue

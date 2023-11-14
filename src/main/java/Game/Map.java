@@ -75,7 +75,7 @@ public class Map {
             if(count > 10000)
                 break;
 
-            Direction dir = ShortestPath.get_Path(map,start_x,start_y,dest_x,dest_y);
+            Direction dir = ShortestPath.get_Direction(map,start_x,start_y,dest_x,dest_y);
             start_x += dir.getDx();
             start_y += dir.getDy();
             Map.map[start_y][start_x] = 2;
