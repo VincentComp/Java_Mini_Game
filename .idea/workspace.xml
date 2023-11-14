@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fa17fac-b429-4f72-969c-0409557ac260" name="Changes" comment="error in checkout(so commit)">
+    <list default="true" id="2fa17fac-b429-4f72-969c-0409557ac260" name="Changes" comment="modified GUI to set properties inside constructor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/FuncATestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/FuncATestMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/KeyboardListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/KeyboardListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/MainGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/MainGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/MazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/MazeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game/JerryContrller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game/MovingObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/MovingObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/ShortestPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/ShortestPath.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,10 +39,23 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="FunctionB" />
+        <entry key="$PROJECT_DIR$" value="FunctionC" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b638f255-5814-420d-bd09-9ef3d51ecf7c" />
+        <option name="url" value="https://github.com/VincentComp/Comp3111F23G18.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -68,16 +78,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "FunctionC",
-    "run.code.analysis.last.selected.profile": "pProject Default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;FunctionB&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/IdeaProjects/Comp3111F23G18&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/Game" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Game" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="FuncATestMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Game.FuncATestMain" />
@@ -121,8 +140,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.GUI" />
         <item itemvalue="Application.FuncATestMain" />
+        <item itemvalue="Application.GUI" />
       </list>
     </recent_temporary>
   </component>
@@ -175,10 +194,108 @@
       <option name="project" value="LOCAL" />
       <updated>1699194192245</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="FunctionA V1.0">
+      <created>1699363399589</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699363399589</updated>
+    </task>
+    <task id="LOCAL-00007" summary="FunctionA v1.0">
+      <created>1699363638679</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699363638679</updated>
+    </task>
+    <task id="LOCAL-00008" summary="FunctionA v1.1&#10;Add a .csv generator">
+      <created>1699366342843</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699366342843</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add a .csv generator">
+      <created>1699366551963</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699366551963</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add a GUI">
+      <created>1699371684897</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1699371684897</updated>
+    </task>
+    <task id="LOCAL-00011" summary="modified GUI to set properties inside constructor">
+      <created>1699778482173</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1699778482173</updated>
+    </task>
+    <task id="LOCAL-00012" summary="modified GUI to set properties inside constructor">
+      <created>1699778515584</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1699778515584</updated>
+    </task>
+    <task id="LOCAL-00013" summary="modified GUI to set properties inside constructor">
+      <created>1699779778700</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1699779778700</updated>
+    </task>
+    <task id="LOCAL-00014" summary="modified GUI to set properties inside constructor">
+      <created>1699805239280</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1699805239280</updated>
+    </task>
+    <task id="LOCAL-00015" summary="modified GUI to set properties inside constructor">
+      <created>1699850605252</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1699850605252</updated>
+    </task>
+    <task id="LOCAL-00016" summary="modified GUI to set properties inside constructor">
+      <created>1699857819667</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1699857819667</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="FunctionC" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
@@ -204,38 +321,29 @@
         </entry>
       </map>
     </option>
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="Master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="FunctionB :: Map" />
     <MESSAGE value="Finished testing pull" />
     <MESSAGE value="error in checkout(so commit)" />
-    <option name="LAST_COMMIT_MESSAGE" value="error in checkout(so commit)" />
+    <MESSAGE value="FunctionA V1.0" />
+    <MESSAGE value="FunctionA v1.0" />
+    <MESSAGE value="FunctionA v1.1&#10;Add a .csv generator" />
+    <MESSAGE value="Add a .csv generator" />
+    <MESSAGE value="Add a GUI" />
+    <MESSAGE value="modified GUI to set properties inside constructor" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified GUI to set properties inside constructor" />
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Project$TestAll.ic" NAME="TestAll Coverage Results" MODIFIED="1699940785997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>Game.*</FILTER>
-    </SUITE>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Game/FuncATestMain.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

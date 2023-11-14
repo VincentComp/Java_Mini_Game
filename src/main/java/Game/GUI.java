@@ -64,13 +64,11 @@ public class GUI extends JFrame {
 	}
 
 	// Update Maze
-	/*
 	public void updateMaze(int maze[][]){
 
 		this.maze = maze;
 		//paintMaze();
 	}
-	*/
 
 	public void updateMaze(int row, int col, int nrow, int ncol, int color){
 		maze[row][col] = 0;
