@@ -1,9 +1,11 @@
 package Game;
 import java.awt.event.KeyListener;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class GUI extends JFrame {
 	public JPanel cell[][];
@@ -12,6 +14,9 @@ public class GUI extends JFrame {
 
 	private int[][] maze;
 
+	public static int Jerry_lock = 0;
+	public static int Tom_lock = 0;
+
 	public GUI(int[][] maze) {
 		this.maze = maze;
 		cell = new JPanel[30][30];
@@ -19,13 +24,23 @@ public class GUI extends JFrame {
 	}
 
 	public GUI(int[][] maze, Tuple s, Tuple e){
+		Jerry_lock =0;
+		Tom_lock = 0;
 		this.maze = maze;
 		cell = new JPanel[30][30];
 		paintMaze();
 		// Initialize the location of Jerry
-		JerryLocation jerry = new JerryLocation(s, e, this, 500);
-		jerry.start();
+		JerryLocation jerry = new JerryLocation(s, e, this, 1);
 		this.addKeyListener((KeyListener) new KeyboardListener());
+
+		TomLocation tom = new TomLocation(s,e,this,1);
+		Timer timer = new Timer();
+		timer.schedule(new TimerTask() {
+			@Override
+			public void run() {
+				TomLocation.move();
+			}
+		},new Date(),500);
 	}
 
 	private void paintMaze() {
@@ -75,7 +90,11 @@ public class GUI extends JFrame {
 		maze[nrow][ncol] = color;
 
 		cell[row][col].setBackground(Color.WHITE);
-		cell[nrow][ncol].setBackground(Color.ORANGE);
+		if(color == 3)
+			cell[nrow][ncol].setBackground(Color.ORANGE);
+		else if (color == 2)
+			cell[nrow][ncol].setBackground(Color.BLUE);
+
 		//paintMaze();
 	}
 

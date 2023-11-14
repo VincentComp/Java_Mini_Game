@@ -1,3 +1,4 @@
+/*
 package Game;
 // import java.util.ArrayList;
 
@@ -115,6 +116,7 @@ public class MovingObject extends Thread {
         }
     }
 
+    /*
     static void checkEndGame(){
         int x = position.getX();
         int y = position.getY();
@@ -128,15 +130,18 @@ public class MovingObject extends Thread {
         else if(x == ex && y == ey && speed == 500){
             playerWins();
         }
-    }
+    }*/
 
+    /*
     protected static void playerWins(){
         System.out.println("You Win!");
         g.updateMaze(maze);
         while(true){
             pauser();
         }
-    }
+    }*/
+
+    /*
     protected static void playerLoses(){
         System.out.println("You Lose!");
         while(true){
@@ -148,3 +153,5 @@ public class MovingObject extends Thread {
         return position;
     }
 }
+
+*/
