@@ -7,11 +7,11 @@ import java.util.Currency;
 // Idea basically the same as ThreadsController
 public class MovingObject extends Thread {
     // ArrayList<ArrayList<DataOfSquare>> Squares= new ArrayList<ArrayList<DataOfSquare>>();
-    int[][] maze;
-    GUI g;
-    Tuple position;
-    Tuple end_position;
-    long speed;
+    static int[][] maze;
+    static GUI g;
+    static Tuple position;
+    static Tuple end_position;
+    static long speed;
     public static int direction;
 
     // Constructor of Moving Object
@@ -27,7 +27,7 @@ public class MovingObject extends Thread {
     }
 
     // Delay between each move of the moving object
-    protected void pauser(){
+    protected static void pauser(){
         try{
             sleep(speed);
         }
@@ -38,7 +38,7 @@ public class MovingObject extends Thread {
 
     // Check whether it collide with a wall
     // 1: Right, 2: Left, 3:Top, 4: Bottom
-    protected boolean checkWall(){
+    protected static boolean checkWall(){
         int x = position.getX();
         int y = position.getY();
 
@@ -79,7 +79,7 @@ public class MovingObject extends Thread {
         }
     }
 
-    protected void move(){
+    protected static void move(){
 
         int x = position.getX();
         int y = position.getY();
@@ -125,7 +125,7 @@ public class MovingObject extends Thread {
         //g.updateMaze(maze);
     }
 
-    protected void checkEndGame(){
+    protected static void checkEndGame(){
         int x = position.getX();
         int y = position.getY();
         int ex = end_position.getX();
@@ -140,13 +140,14 @@ public class MovingObject extends Thread {
         }
     }
 
-    protected void playerWins(){
+    protected static void playerWins(){
         System.out.println("You Win!");
+        move();
         while(true){
             pauser();
         }
     }
-    protected void playerLoses(){
+    protected static void playerLoses(){
         System.out.println("You Lose!");
         while(true){
             pauser();

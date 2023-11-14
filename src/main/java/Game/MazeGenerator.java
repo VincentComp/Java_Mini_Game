@@ -56,7 +56,7 @@ class MazeGenerator {
         }
         for(int i = 1; i<dimension-1;i++){
             for(int j = 1; j<dimension-1;j++){
-                if(rand.nextFloat()>0.93)
+                if(rand.nextFloat()>0.3)
                     maze[j][i] = 0;
             }
         }
