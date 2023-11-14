@@ -1,7 +1,6 @@
 package Game;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.awt.event.MouseEvent;
 
  public class KeyboardListener extends KeyAdapter{
  	
@@ -25,9 +24,6 @@ import java.awt.event.MouseEvent;
 							JerryLocation.direction = 4;
 							JerryLocation.clicked();
 		    				break;
-
-				case MouseEvent.BUTTON1:
-					 break;
 		    	
 		    	default: 	break;
 
