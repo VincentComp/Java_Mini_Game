@@ -1,6 +1,15 @@
 package Game;
 
 
+import javafx.scene.layout.GridPane;
+
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
+import java.io.File;
+import java.io.Reader;
+import java.util.Timer;
+
 public class TomLocation{
     static int[][] maze;
     static GUI gui;
@@ -82,6 +91,13 @@ public class TomLocation{
 
             int x = position.getX();
             int y = position.getY();
+
+            if(x ==0){
+                GUI.cell[0][0].setBackground(Color.RED);
+                return;
+            }
+            System.out.println("(" + x + ","+ y +")");//
+
             int color = 2;          // Color for Tom
 
             switch (direction) {
@@ -134,12 +150,54 @@ public class TomLocation{
         GUI.Jerry_lock =1;
         GUI.Tom_lock = 1;
 
+        GUI.timer.cancel();
+        GUI.timer = new Timer();
+
+        JPanel panel = new JPanel();
+
+        MainGame.f1.setContentPane(panel);
+        MainGame.f1.getContentPane().removeAll();
+        MainGame.f1.getContentPane().setBackground(Color.ORANGE);
+        JLabel label = new JLabel("You Win", SwingConstants.CENTER);
+        label.setFont(new Font("Serif", Font.BOLD, 100));
+        MainGame.f1.getContentPane().add(label);
+
+
+
+        MainGame.f1.revalidate();
+        MainGame.f1.repaint();
+
     }
 
     protected static void playerLoses(){
         System.out.println("You Lose!");
+
+        GUI.timer.cancel();
+        GUI.timer = new Timer();
+
         GUI.Jerry_lock =1;
         GUI.Tom_lock = 1;
+
+        //update gui
+        JPanel panel = new JPanel();
+        MainGame.f1.setContentPane(panel);
+        MainGame.f1.getContentPane().removeAll();
+        MainGame.f1.getContentPane().setBackground(Color.BLUE);
+        JLabel label = new JLabel("You lose", SwingConstants.CENTER);
+        label.setFont(new Font("Serif", Font.BOLD, 100));
+        label.setForeground(Color.WHITE);
+        MainGame.f1.getContentPane().add(label);
+
+
+        MainGame.f1.revalidate();
+        MainGame.f1.repaint();
+
+
+
+
+
+
+
 
     }
 

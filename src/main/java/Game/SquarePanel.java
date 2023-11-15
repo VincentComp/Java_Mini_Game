@@ -1,3 +1,4 @@
+/*
 package Game;
 import java.awt.Color;
 import javax.swing.JPanel;
@@ -17,3 +18,4 @@ public class SquarePanel extends JPanel{
 	
 }
 
+*/

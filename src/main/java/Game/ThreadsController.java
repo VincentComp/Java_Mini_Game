@@ -1,3 +1,5 @@
+/*
+
 package Game;
 import java.util.ArrayList;
 
@@ -168,3 +170,5 @@ public class ThreadsController extends Thread {
 		 }
 	 }
 }
+
+*/

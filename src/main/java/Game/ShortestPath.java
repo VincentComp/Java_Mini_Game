@@ -1,5 +1,9 @@
 package Game;
 
+import javax.swing.*;
+import java.awt.*;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
@@ -77,14 +81,12 @@ public class ShortestPath {
             }
         }
 
-        return null;
+        return Direction.LEFT;
 
     }
 
     //Wait
-    public static void Export_Shortest_Path(){
 
-    }
 }
 
 
