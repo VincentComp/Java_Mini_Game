@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fa17fac-b429-4f72-969c-0409557ac260" name="Changes" comment="FunctionC">
+    <list default="true" id="2fa17fac-b429-4f72-969c-0409557ac260" name="Changes" comment="Update to prevent crashing the game due to the early move of Tom">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shortest path.csv" beforeDir="false" afterPath="$PROJECT_DIR$/shortest path.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game/FuncATestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/FuncATestMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game/FunctionCTestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/FunctionCTestMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/TomLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/TomLocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game/MainGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/MainGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,7 +299,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699986420952</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Update to prevent crashing the game due to the early move of Tom">
+      <option name="closed" value="true" />
+      <created>1700030776170</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1700030776170</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -360,14 +371,15 @@
     <MESSAGE value="add menu" />
     <MESSAGE value="modified GUI to set properties inside constructor" />
     <MESSAGE value="FunctionC" />
-    <option name="LAST_COMMIT_MESSAGE" value="FunctionC" />
+    <MESSAGE value="Update to prevent crashing the game due to the early move of Tom" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update to prevent crashing the game due to the early move of Tom" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Game/FuncATestMain.java</url>
-          <line>5</line>
+          <line>6</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
