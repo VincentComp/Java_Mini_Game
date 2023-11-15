@@ -31,17 +31,19 @@ public class GUI extends JFrame {
 		this.maze = maze;
 		cell = new JPanel[30][30];
 		paintMaze();
+
 		// Initialize the location of Jerry
 		JerryLocation jerry = new JerryLocation(s, e, this, 500);
 		this.addKeyListener((KeyListener) new KeyboardListener());
 
 		TomLocation tom = new TomLocation(s,e,this,500);
+
 		timer.schedule(new TimerTask() {
 			@Override
 			public void run() {
 				TomLocation.move();
 			}
-		},new Date(),150);
+		},500 ,150);
 
 
 	}
