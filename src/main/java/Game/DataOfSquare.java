@@ -1,3 +1,4 @@
+/*
 package Game;
 import java.util.ArrayList;
 import java.awt.Color;
@@ -23,3 +24,4 @@ public class DataOfSquare {
 		square.ChangeColor(C.get(c));
 	}
 }
+*/

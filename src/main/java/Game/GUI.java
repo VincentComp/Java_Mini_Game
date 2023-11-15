@@ -8,7 +8,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class GUI extends JFrame {
-	public JPanel cell[][];
+	public static JPanel cell[][];
 	private static final int MAZE_SIZE = 30;
 	private static final int GRID_SIZE = 20; // Adjust this value to change the grid size
 
@@ -17,11 +17,13 @@ public class GUI extends JFrame {
 	public static int Jerry_lock = 0;
 	public static int Tom_lock = 0;
 
+	public static Timer timer = new Timer();
 	public GUI(int[][] maze) {
 		this.maze = maze;
 		cell = new JPanel[30][30];
 		paintMaze();
 	}
+
 
 	public GUI(int[][] maze, Tuple s, Tuple e){
 		Jerry_lock =0;
@@ -30,17 +32,18 @@ public class GUI extends JFrame {
 		cell = new JPanel[30][30];
 		paintMaze();
 		// Initialize the location of Jerry
-		JerryLocation jerry = new JerryLocation(s, e, this, 1);
+		JerryLocation jerry = new JerryLocation(s, e, this, 500);
 		this.addKeyListener((KeyListener) new KeyboardListener());
 
-		TomLocation tom = new TomLocation(s,e,this,1);
-		Timer timer = new Timer();
+		TomLocation tom = new TomLocation(s,e,this,500);
 		timer.schedule(new TimerTask() {
 			@Override
 			public void run() {
 				TomLocation.move();
 			}
-		},new Date(),500);
+		},new Date(),150);
+
+
 	}
 
 	private void paintMaze() {
@@ -78,12 +81,15 @@ public class GUI extends JFrame {
 		repaint();
 	}
 
+	/*
 	// Update Maze
 	public void updateMaze(int maze[][]){
 
 		this.maze = maze;
 		//paintMaze();
 	}
+	*/
+
 
 	public void updateMaze(int row, int col, int nrow, int ncol, int color){
 		maze[row][col] = 0;
