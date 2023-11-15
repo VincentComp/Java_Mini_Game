@@ -6,16 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2fa17fac-b429-4f72-969c-0409557ac260" name="Changes" comment="FunctionC">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/DataOfSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/DataOfSquare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shortest path.csv" beforeDir="false" afterPath="$PROJECT_DIR$/shortest path.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/MainGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/MainGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/ShortestPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/ShortestPath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/SquarePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/SquarePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/ThreadsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/ThreadsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game/TomLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/TomLocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,17 +77,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "FunctionC",
-    "last_opened_file_path": "C:/Users/user/IdeaProjects/Comp3111F23G18",
-    "run.code.analysis.last.selected.profile": "pProject Default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;FunctionC&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/IdeaProjects/Comp3111F23G18&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/Game" />
@@ -145,9 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FuncATestMain" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.GUI" />
+        <item itemvalue="Application.FuncATestMain" />
+        <item itemvalue="Application.FuncATestMain" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>

@@ -92,11 +92,27 @@ public class TomLocation{
             int x = position.getX();
             int y = position.getY();
 
-            if(x ==0){
+
+            //Jsut for debug
+            if(x ==0 && y==0){
                 GUI.cell[0][0].setBackground(Color.RED);
-                return;
+
+                Tuple EndLocation = new Tuple(0,0);
+
+                for(int j = 0; j < 30; j++){
+
+                    System.out.println(maze[j][29]);
+                    if(maze[j][29] == 0){
+
+                        EndLocation = new Tuple(29, j);
+                    }
+                }
+
+                x = EndLocation.getX();
+                y = EndLocation.getY();
+                System.out.println("(Solved)");
+                position = new Tuple(x,y);
             }
-            System.out.println("(" + x + ","+ y +")");//
 
             int color = 2;          // Color for Tom
 
@@ -153,6 +169,7 @@ public class TomLocation{
         GUI.timer.cancel();
         GUI.timer = new Timer();
 
+        try{
         JPanel panel = new JPanel();
 
         MainGame.f1.setContentPane(panel);
@@ -165,7 +182,9 @@ public class TomLocation{
 
 
         MainGame.f1.revalidate();
-        MainGame.f1.repaint();
+        MainGame.f1.repaint();}catch(Exception e){
+            System.out.println("It may has runtime excpeiton");
+        }
 
     }
 
@@ -178,20 +197,23 @@ public class TomLocation{
         GUI.Jerry_lock =1;
         GUI.Tom_lock = 1;
 
-        //update gui
-        JPanel panel = new JPanel();
-        MainGame.f1.setContentPane(panel);
-        MainGame.f1.getContentPane().removeAll();
-        MainGame.f1.getContentPane().setBackground(Color.BLUE);
-        JLabel label = new JLabel("You lose", SwingConstants.CENTER);
-        label.setFont(new Font("Serif", Font.BOLD, 100));
-        label.setForeground(Color.WHITE);
-        MainGame.f1.getContentPane().add(label);
+        try {
+            //update gui
+            JPanel panel = new JPanel();
+            MainGame.f1.setContentPane(panel);
+            MainGame.f1.getContentPane().removeAll();
+            MainGame.f1.getContentPane().setBackground(Color.BLUE);
+            JLabel label = new JLabel("You lose", SwingConstants.CENTER);
+            label.setFont(new Font("Serif", Font.BOLD, 100));
+            label.setForeground(Color.WHITE);
+            MainGame.f1.getContentPane().add(label);
 
 
-        MainGame.f1.revalidate();
-        MainGame.f1.repaint();
-
+            MainGame.f1.revalidate();
+            MainGame.f1.repaint();
+        }catch (Exception e){
+            System.out.println("It may has runtime excpeiton");
+        }
 
 
 
