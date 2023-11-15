@@ -1,3 +1,4 @@
+/*
 package Game;
 
 import javax.swing.*;
@@ -17,7 +18,9 @@ public class FuncATestMain {
         frame.pack();
         frame.setVisible(true);
 
-        System.out.println("RAW MAZE\n" + mazeGenerator.getRawMaze());
-        System.out.println("SYMBOLIC MAZE\n" + mazeGenerator.getSymbolicMaze());
+        //System.out.println("RAW MAZE\n" + mazeGenerator.getRawMaze());
+        //System.out.println("SYMBOLIC MAZE\n" + mazeGenerator.getSymbolicMaze());
     }
 }
+
+ */

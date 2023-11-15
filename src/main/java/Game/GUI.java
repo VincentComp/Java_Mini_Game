@@ -1,23 +1,56 @@
 package Game;
 import java.awt.event.KeyListener;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class GUI extends JFrame {
+	public static JPanel cell[][];
 	private static final int MAZE_SIZE = 30;
 	private static final int GRID_SIZE = 20; // Adjust this value to change the grid size
 
 	private int[][] maze;
 
+	public static int Jerry_lock = 0;
+	public static int Tom_lock = 0;
+
+	public static Timer timer = new Timer();
 	public GUI(int[][] maze) {
 		this.maze = maze;
+		cell = new JPanel[30][30];
 		paintMaze();
+	}
+
+
+	public GUI(int[][] maze, Tuple s, Tuple e){
+		Jerry_lock =0;
+		Tom_lock = 0;
+		this.maze = maze;
+		cell = new JPanel[30][30];
+		paintMaze();
+
+		// Initialize the location of Jerry
+		JerryLocation jerry = new JerryLocation(s, e, this, 500);
+		this.addKeyListener((KeyListener) new KeyboardListener());
+
+		TomLocation tom = new TomLocation(s,e,this,500);
+
+		timer.schedule(new TimerTask() {
+			@Override
+			public void run() {
+				TomLocation.move();
+			}
+		},1000 ,150);
+
+
 	}
 
 	private void paintMaze() {
 		// enum to increase readability
+		getContentPane().removeAll();
 		int Empty = 0;
 		int Wall = 1;
 		int Tom = 2;
@@ -26,28 +59,55 @@ public class GUI extends JFrame {
 		// Loop through the whole maze to fill grids with the corresponding color
 		for (int i = 0; i < MAZE_SIZE; i++) {
 			for (int j = 0; j < MAZE_SIZE; j++) {
-				JPanel cell = new JPanel();
-				cell.setPreferredSize(new Dimension(GRID_SIZE, GRID_SIZE));
+				//JPanel cell = new JPanel();
+				cell[i][j] = new JPanel();
+				cell[i][j].setPreferredSize(new Dimension(GRID_SIZE, GRID_SIZE));
 				if (maze[i][j] == Wall) {
-					cell.setBackground(Color.GRAY);
+					cell[i][j].setBackground(Color.GRAY);
 				}
 				else if(maze[i][j] == Empty) {
-					cell.setBackground(Color.WHITE);
+					cell[i][j].setBackground(Color.WHITE);
 				}
 				else if(maze[i][j] == Tom) {
-					cell.setBackground(Color.BLUE);
+					cell[i][j].setBackground(Color.BLUE);
 				}
 				else if(maze[i][j] == Jerry) {
-					cell.setBackground(Color.ORANGE);
+					cell[i][j].setBackground(Color.ORANGE);
 				}
 
-				add(cell);
+				add(cell[i][j]);
 			}
 		}
+		pack();
+		revalidate();
+		repaint();
 	}
 
+	/*
 	// Update Maze
 	public void updateMaze(int maze[][]){
+
 		this.maze = maze;
+		//paintMaze();
+	}
+	*/
+
+
+	public void updateMaze(int row, int col, int nrow, int ncol, int color){
+		maze[row][col] = 0;
+		maze[nrow][ncol] = color;
+
+		cell[row][col].setBackground(Color.WHITE);
+		if(color == 3)
+			cell[nrow][ncol].setBackground(Color.ORANGE);
+		else if (color == 2)
+			cell[nrow][ncol].setBackground(Color.BLUE);
+
+		//paintMaze();
+	}
+
+	// Get Maze
+	public int[][] getMaze(){
+		return this.maze;
 	}
 }

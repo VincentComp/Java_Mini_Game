@@ -1,5 +1,9 @@
 package Game;
 
+import javax.swing.*;
+import java.awt.*;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
@@ -45,10 +49,7 @@ public class ShortestPath {
      * @return The direction of the shortest path from Tom
      */
     public static Direction get_Path(int[][] map, int cx, int cy, int mx, int my) {
-        /**
-         * @param queue The ready queue for storing the future searching vertex
-         * @param discovered The hidden layer of teh map storing the discovered vertex
-         */
+
         Queue<Vertex> queue = new ArrayDeque<>();
         boolean[][] discovered = new boolean[30][30];
 
@@ -77,9 +78,12 @@ public class ShortestPath {
             }
         }
 
-        return null;
+        return Direction.LEFT;
 
     }
+
+    //Wait
+
 }
 
 

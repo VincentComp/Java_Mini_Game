@@ -1,9 +1,8 @@
+
+/*
 package Game;
 
-/**
- * Class
- * Not yet type this
- */
+
 public class Map {
     static int[][] map =
             {       {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
@@ -62,6 +61,7 @@ public class Map {
     public static void main(String[] args) {
 
 
+        /*
 
         int start_x = 0;//0
         int start_y = 2;//2
@@ -88,5 +88,9 @@ public class Map {
 
 
 
+
+
     }
 }
+
+*/
