@@ -1,3 +1,4 @@
+/*
 package Game;
 
 import javax.swing.*;
@@ -16,3 +17,5 @@ public class FuncATestMain {
         //System.out.println("SYMBOLIC MAZE\n" + mazeGenerator.getSymbolicMaze());
     }
 }
+
+ */

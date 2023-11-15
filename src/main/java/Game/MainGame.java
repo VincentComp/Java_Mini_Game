@@ -119,7 +119,7 @@ public class MainGame extends JFrame implements ActionListener {
 
 
                     //Modified the maze=============//
-                    writer.append(start_y +" " + start_x+"\n");
+                    writer.append(start_y +"," + start_x+"\n");
                     maze[start_y][start_x] = 3;
 
                     while(!((start_x == dest_x) && (start_y == dest_y))){
@@ -127,7 +127,7 @@ public class MainGame extends JFrame implements ActionListener {
                         start_x += dir.getDx();
                         start_y += dir.getDy();
                         maze[start_y][start_x] = 3;
-                        writer.append(start_y +" " + start_x +"\n");//write to csv
+                        writer.append(start_y +"," + start_x +"\n");//write to csv
                     }
                     //==========================
 

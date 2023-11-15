@@ -108,10 +108,14 @@ public class TomLocation{
                     }
                 }
 
+
+
                 x = EndLocation.getX();
                 y = EndLocation.getY();
                 System.out.println("(Solved)");
                 position = new Tuple(x,y);
+
+                JerryLocation.end_position = new Tuple(x,y);
             }
 
             int color = 2;          // Color for Tom

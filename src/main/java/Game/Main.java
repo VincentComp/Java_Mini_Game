@@ -1,3 +1,4 @@
+/*
 package Game;
 import javax.swing.JFrame;
 import java.awt.*;
@@ -50,3 +51,4 @@ public class Main {
 		//tom.start();
 	}
 }
+*/

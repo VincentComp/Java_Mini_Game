@@ -43,7 +43,7 @@ public class GUI extends JFrame {
 			public void run() {
 				TomLocation.move();
 			}
-		},500 ,150);
+		},1000 ,150);
 
 
 	}
