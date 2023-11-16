@@ -32,9 +32,9 @@ public class GUI extends JFrame {
 	public static Timer timer = new Timer();
 
 	/**
-	 * Constructor for Function A and B
-	 * Set layout of JFrame to GridLayout
-	 * Define default close operation to DISPOSE_ON_CLOSE
+	 * Constructor for Function A and B.
+	 * Set layout of JFrame to GridLayout.
+	 * Define default close operation to DISPOSE_ON_CLOSE.
 	 *
 	 * @param maze the 30*30 game map
 	 */
@@ -49,9 +49,9 @@ public class GUI extends JFrame {
 	}
 
 	/**
-	 * Constructor for Function C
-	 * Set layout of JFrame to GridLayout
-	 * Define default close operation to DISPOSE_ON_CLOSE
+	 * Constructor for Function C.
+	 * Set layout of JFrame to GridLayout.
+	 * Define default close operation to DISPOSE_ON_CLOSE.
 	 *
 	 * @param maze the 30*30 game map
 	 * @param s StartLocation
@@ -85,12 +85,12 @@ public class GUI extends JFrame {
 	}
 
 	/**
-	 * Display maze map in GUI using JFrame and JPanel
+	 * Display maze map in GUI using JFrame and JPanel.
 	 * Display maze map according to the following rules:
-	 * Gray: Wall
-	 * White: Road
-	 * Orange: Jerry
-	 * Blue: Tom
+	 * Gray: Wall;
+	 * White: Road;
+	 * Orange: Jerry;
+	 * Blue: Tom.
 	 */
 	public void paintMaze() {
 		// enum to increase readability
@@ -128,11 +128,11 @@ public class GUI extends JFrame {
 	}
 
 	/**
-	 * Update maze array and maze map in GUI
-	 * Set current maze array element to 0
-	 * Set next maze array element to color
-	 * Set the color of the current cell to white (road)
-	 * Set the color of the next cell according to the type (Tom or Jerry)
+	 * Update maze array and maze map in GUI.
+	 * Set current maze array element to 0.
+	 * Set next maze array element to color.
+	 * Set the color of the current cell to white (road).
+	 * Set the color of the next cell according to the type (Tom or Jerry).
 	 *
 	 * @param row	current row
 	 * @param col	current column
@@ -152,7 +152,7 @@ public class GUI extends JFrame {
 	}
 
 	/**
-	 * Accessor: return the maze array
+	 * Accessor: return the maze array.
 	 *
 	 * @return return the current maze array
 	 */
