@@ -7,13 +7,20 @@ import java.util.Stack;
 //import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-class MazeGenerator {
+/**
+ * A class to generate a maze map
+ */
+public class MazeGenerator {
     
     private Stack<Node> stack = new Stack<>();
     private Random rand = new Random();
     private int[][] maze;
     private int dimension;
 
+    /**
+     * Initialize elements in maze array to 1 (wall)
+     * @param dim size of the maze
+     */
     MazeGenerator(int dim) {
         maze = new int[dim][dim];
         dimension = dim;
@@ -23,6 +30,9 @@ class MazeGenerator {
                 maze[i][j] = 1;
     }
 
+    /**
+     * Output the maze map as a CSV file using FileWriter
+     */
     public void genCSV(){
         String csvFile = "maze.csv";
 
@@ -43,6 +53,16 @@ class MazeGenerator {
         }
 
     }
+
+    /**
+     * Generate the maze using DFS.
+     * Push first node (1,1) to a stack.
+     * While the stack is not empty, pop an element from the stack,
+     * check if the node is valid and not visited.
+     * If true, mark the node as visited, find its neighbors and randomly push some nodes to the stack.
+     *
+     * Break walls randomly (7% probability) to create other possible path(s).
+     */
     public void generateMaze() {
         stack.push(new Node(1,1));
         while (!stack.empty()) {
@@ -54,14 +74,18 @@ class MazeGenerator {
                 randomlyAddNodesToStack(neighbors);
             }
         }
+
+        // Break walls randomly to create other possible path(s)
         for(int i = 1; i<dimension-1;i++){
             for(int j = 1; j<dimension-1;j++){
                 if(rand.nextFloat()>0.93)//
                     maze[j][i] = 0;
             }
         }
+
+        // Randomly pick a starting point
         ArrayList<Integer> start = new ArrayList<>();
-        for(int j = 1; j< dimension-1;j++){
+        for(int j = 1; j< dimension-1;j++){     // Select valid starting point
             if(maze[j][0+1] == 0){
                 start.add(j);
             }
@@ -69,8 +93,9 @@ class MazeGenerator {
         int s = rand.nextInt(start.size());
         maze[start.get(rand.nextInt(start.size()))][0]=0;
 
+        // Randomly pick an ending point
         ArrayList<Integer> end = new ArrayList<>();
-        for(int j = 1; j< dimension-1;j++){
+        for(int j = 1; j< dimension-1;j++){     // Select valid ending point
             if(maze[j][dimension-1-1] == 0){
                 end.add(j);
             }
@@ -78,26 +103,8 @@ class MazeGenerator {
         maze[end.get(rand.nextInt(end.size()))][dimension-1]=0;
     }
 
-    /*public String getRawMaze() {
-        StringBuilder sb = new StringBuilder();
-        for (int[] row : maze) {
-            sb.append(Arrays.toString(row) + "\n");
-        }
-        return sb.toString();
-    }*/
 
-    /*public String getSymbolicMaze() {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < dimension; i++) {
-            for (int j = 0; j < dimension; j++) {
-                sb.append(maze[i][j] == 1 ? "*" : " ");
-                sb.append("  "); 
-            }
-            sb.append("\n");
-        }
-        return sb.toString();
-    }*/
-
+    // Check if next node is valid or not
     private boolean validNextNode(Node node) {
         int numNeighboringOnes = 0;
         for (int y = node.y-1; y < node.y+2; y++) {
@@ -110,6 +117,7 @@ class MazeGenerator {
         return (numNeighboringOnes < 3) && maze[node.y][node.x] != 0;
     }
 
+    // Randomly push valid neighbors to the stack
     private void randomlyAddNodesToStack(ArrayList<Node> nodes) {
         int targetIndex;
         while (!nodes.isEmpty()) {
@@ -118,6 +126,7 @@ class MazeGenerator {
         }
     }
 
+    // Find valid neighbors and put them to an array list
     private ArrayList<Node> findNeighbors(Node node) {
         ArrayList<Node> neighbors = new ArrayList<>();
         for (int y = node.y-1; y < node.y+2; y++) {
@@ -131,18 +140,26 @@ class MazeGenerator {
         return neighbors;
     }
 
+    // Check if the point is inside the maze
     private Boolean pointOnGrid(int x, int y) {
         return x > 0 && y > 0 && x < dimension-1 && y < dimension-1;
     }
 
+    // Check if the point is NOT at a corner
     private Boolean pointNotCorner(Node node, int x, int y) {
         return (x == node.x || y == node.y);
     }
-    
+
+    // Check if a node is modified
     private Boolean pointNotNode(Node node, int x, int y) {
         return !(x == node.x && y == node.y);
     }
 
+    /**
+     * Accessor: get the maze array
+     *
+     * @return maze array
+     */
     public int[][] getMaze(){
         return maze;
     };
