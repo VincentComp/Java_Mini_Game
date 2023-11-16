@@ -65,10 +65,6 @@ public class MainGame extends JFrame implements ActionListener {
 
                 GUI frame = new GUI(mazeGenerator.getMaze());
                 frame.setTitle("Function A: Maze Generator");
-                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-                frame.setLayout(new GridLayout(30, 30));
-                frame.pack();
-                frame.setVisible(true);
                 frame.addWindowListener(new WindowAdapter() {
                     @Override
                     public void windowClosed(WindowEvent e) {
@@ -135,10 +131,6 @@ public class MainGame extends JFrame implements ActionListener {
                 //GUI==========================
                 GUI frame = new GUI(maze);
                 frame.setTitle("Function B: Shortest Path");
-                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-                frame.setLayout(new GridLayout(30, 30));
-                frame.pack();
-                frame.setVisible(true);
 
                 frame.addWindowListener(new WindowAdapter() {
                     @Override
@@ -177,17 +169,8 @@ public class MainGame extends JFrame implements ActionListener {
                 // GUI
                 f1 = new GUI(maze.getMaze(), StartLocation, EndLocation);
 
-
-
                 //Setting up the window settings
                 f1.setTitle("Function C: Have Fun and play");
-                f1.setLayout(new GridLayout(30, 30));
-                f1.pack();
-                f1.setVisible(true);
-                f1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-
-
-
 
                 f1.addWindowListener(new WindowAdapter() {
                     @Override

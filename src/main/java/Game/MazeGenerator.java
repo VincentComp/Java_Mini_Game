@@ -7,6 +7,9 @@ import java.util.Stack;
 //import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+/**
+ * A class to generate a maze map
+ */
 class MazeGenerator {
     
     private Stack<Node> stack = new Stack<>();
