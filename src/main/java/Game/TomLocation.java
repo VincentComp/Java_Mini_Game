@@ -1,13 +1,6 @@
 package Game;
-
-
-import javafx.scene.layout.GridPane;
-
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.io.File;
-import java.io.Reader;
 import java.util.Timer;
 
 /**
