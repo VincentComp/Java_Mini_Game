@@ -3,12 +3,15 @@ package Game;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.mockito.Mockito.*;
 
 public class TestForA {
    int[][] map ={  {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
@@ -124,4 +127,46 @@ public class TestForA {
         File f = new File("maze.csv");
         assertTrue(f.exists());
     }
+
+
+    @Test
+    public void testTimerSchedule() {
+        MazeGenerator m = new MazeGenerator(30);
+        m.generateMaze();
+
+        int[][] maze = m.getMaze();
+        Tuple s = new Tuple(0,9);
+        Tuple e = new Tuple(29,9);
+
+        // Create a mock instance of TomLocation
+        TomLocation tomLocationMock = mock(TomLocation.class);
+
+        // Create a GUI instance, passing the mock TomLocation
+        GUI gui = new GUI(maze, s, e);
+
+        // Create a Timer instance
+        Timer timer = new Timer();
+
+        // Schedule the TimerTask
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                tomLocationMock.move();
+            }
+        }, 1000, 150);
+
+        // Wait for the expected number of invocations
+        try {
+            Thread.sleep(1000 + 150 * 8); // Adjust the sleep time based on the expected number of invocations
+        } catch (InterruptedException ef) {
+            ef.printStackTrace();
+        }
+
+        // Verify that TomLocation.move() is called the expected number of times
+        verify(tomLocationMock, times(8)).move(); // Adjust the expected number based on the timing values
+
+        // Cancel the Timer
+        timer.cancel();
+    }
+
 }
