@@ -13,62 +13,44 @@ import java.util.Timer;
 public class TomLocation{
     static int[][] maze;
     static GUI gui;
+    /**
+     * A tuple to store the current position of Tom
+     */
     static Tuple position;
-    //static Tuple end_position;
+
+    /**
+     * An integer to store the moving direction of Tom
+     * 1: Right
+     * 2: Left
+     * 3: Up
+     * 4. Down
+     */
     public static int direction;
 
-
-    TomLocation(Tuple starting_position, Tuple ending_position, GUI g, int d) {
+    /**
+     * Constructor for TomLocation
+     * Initializes the initial position and direction of Tom
+     *
+     * @param ending_position   To initialize the starting position of Tom to be the exit of the maze
+     * @param g GUi
+     * @param d Initial direction of Tom
+     */
+    TomLocation(Tuple ending_position, GUI g, int d) {
         maze = g.getMaze();
         gui = g;
         position = ending_position;
-        //end_position = ending_position;
         direction = d;
     }
 
-
-
-    /*
-    public static void clicked(){
-        if(!checkWall())
-            move();
-        checkEndGame();
-    }
-
-    protected static boolean checkWall(){
-        int x = position.getX();
-        int y = position.getY();
-
-        switch(direction){
-            case 4:
-                if(y == 29 || maze[y+1][x] == 1) {             // The below block is wall
-                    return true;
-                }
-                break;
-
-            case 3:
-                if(y == 0 || maze[y-1][x] == 1) {             // The upper block is wall
-                    return true;
-                }
-                break;
-
-            case 2:
-                if(x == 0 || maze[y][x-1] == 1) {   // The left block is wall or out of boundary
-                    return true;
-                }
-                break;
-
-            case 1:
-                if(x == 29 || maze[y][x+1] == 1) {             // The right block is wall
-                    return true;
-                }
-                break;
-        }
-        return false;
-    }*/
-
-
-    // 1: Right, 2: Left, 3:Top, 4: Bottom
+    /**
+     * A function for moving Tom according to the direction provided by the shortest path
+     * It also checks whether it catches in this move
+     * If it catches after the move, the player loses
+     * 1: Right
+     * 2: Left
+     * 3: Up
+     * 4: Down
+     */
     protected static void move(){
         if(GUI.Tom_lock == 0) {
 
@@ -93,7 +75,7 @@ public class TomLocation{
             int y = position.getY();
 
 
-            //Jsut for debug
+            //Just for debug
             if(x ==0 && y==0){
                 GUI.cell[0][0].setBackground(Color.RED);
 
@@ -150,21 +132,25 @@ public class TomLocation{
         }
     }
 
-
-
+    /**
+     * A function to check whether Jerry wins
+     * Checks the position of Jerry and the position of the exit
+     */
     protected static void checkEndGame(){
         int x = JerryLocation.position.getX();
         int y = JerryLocation.position.getY();
         int ex = JerryLocation.end_position.getX();
         int ey = JerryLocation.end_position.getY();
 
-
-
         if(x == ex && y == ey){
             playerWins();
         }
     }
 
+    /**
+     * A function that is triggered when Jerry reaches the exit
+     * Prints("You Win!")
+     */
     protected static void playerWins(){
         System.out.println("You Win!");
         GUI.Jerry_lock =1;
@@ -189,9 +175,12 @@ public class TomLocation{
         MainGame.f1.repaint();}catch(Exception e){
             System.out.println("It may has runtime excpeiton");
         }
-
     }
 
+    /**
+     * A function that is triggered when Tom catches Jerry
+     * Prints("You Lose!")
+     */
     protected static void playerLoses(){
         System.out.println("You Lose!");
 
@@ -218,16 +207,5 @@ public class TomLocation{
         }catch (Exception e){
             System.out.println("It may has runtime excpeiton");
         }
-
-
-
-
-
-
-
-    }
-
-    public Tuple getPosition(){
-        return position;
     }
 }

@@ -4,10 +4,35 @@ package Game;
 public class JerryLocation{
     static int[][] maze;
     static GUI gui;
+
+    /**
+     * A tuple to store the current position of Jerry
+     */
     static Tuple position;
+
+    /**
+     * A tuple to store the target position for Jerry to win
+     */
     static Tuple end_position;
+
+    /**
+     * An integer to store the moving direction of Jerry
+     * 1: Right
+     * 2: Left
+     * 3: Up
+     * 4. Down
+     */
     public static int direction;
-    // Constructor of JerryLocation, stores the current position as well as the ending position
+
+    /**
+     * Constructor for JerryLocation
+     * Set the initial position and initial direction for Jerry
+     *
+     * @param starting_position The starting position for Jerry
+     * @param ending_position   The target position for Jerry to win (get out of maze)
+     * @param g GUI
+     * @param d Initial Direction
+     */
     JerryLocation(Tuple starting_position, Tuple ending_position, GUI g, int d) {
         maze = g.getMaze();
         gui = g;
@@ -17,46 +42,54 @@ public class JerryLocation{
     }
 
 
-
+    /**
+     * A function that is triggered when user click on the keyboard to move
+     * If the target position is a wall, Jerry will not move
+     * If the target position is not a wall, Jerry will move and check if it meets end game conditions
+     */
     public static void clicked(){
         if(!checkWall())
             move();
             TomLocation.checkEndGame();
     }
 
+    /**
+     * A function for checking if the target location is a wall or out of boundary
+     * @return true if the target location is a wall or out of boundary, false otherwise
+     */
     protected static boolean checkWall(){
         int x = position.getX();
         int y = position.getY();
 
         switch(direction){
             case 4:
-                if(y == 29 || maze[y+1][x] == 1) {             // The below block is wall
-                    return true;
-                }
+                if(y == 29 || maze[y+1][x] == 1) return true;   // The below block is wall
                 break;
 
             case 3:
-                if(y == 0 || maze[y-1][x] == 1) {             // The upper block is wall
-                    return true;
-                }
+                if(y == 0 || maze[y-1][x] == 1) return true;    // The upper block is wall
                 break;
 
             case 2:
-                if(x == 0 || maze[y][x-1] == 1) {   // The left block is wall or out of boundary
-                    return true;
-                }
+                if(x == 0 || maze[y][x-1] == 1) return true;    // The left block is wall or out of boundary
                 break;
 
             case 1:
-                if(x == 29 || maze[y][x+1] == 1) {             // The right block is wall
-                    return true;
-                }
+                if(x == 29 || maze[y][x+1] == 1) return true;   // The right block is wall
                 break;
         }
         return false;
     }
 
-    // 1: Right, 2: Left, 3:Top, 4: Bottom
+    /**
+     * A function for moving Jerry according to the direction input by the user
+     * It also checks whether it meet Tom in this move
+     * If it reaches Tom after the move, the player loses
+     * 1: Right
+     * 2: Left
+     * 3: Up
+     * 4: Down
+     */
     protected static void move(){
 
         int x = position.getX();
@@ -88,52 +121,5 @@ public class JerryLocation{
                 gui.updateMaze(y,x,y,x+1,color);
                 break;
         }
-    }
-
-    /*
-
-    protected static void checkEndGame(){
-        int x = JerryLocation.position.getX();
-        int y = JerryLocation.position.getY();
-        int ex = JerryLocation.end_position.getX();
-        int ey = JerryLocation.end_position.getY();
-
-        if(x == ex && y == ey){
-            playerWins();
-        }
-    }
-
-
-    protected static void playerWins(){
-        System.out.println("You Win!");
-        GUI.Jerry_lock =1;
-        while(true){
-            try{
-                sleep(500);
-            }
-            catch(InterruptedException e){
-                e.printStackTrace();
-            }
-        }
-    }
-
-
-    protected static void playerLoses(){
-        System.out.println("You Lose!");
-
-        while(true){
-            try{
-                sleep(500);
-            }
-            catch(InterruptedException e){
-                e.printStackTrace();
-            }
-        }
-    }
-
-    */
-
-    public Tuple getPosition(){
-        return position;
     }
 }

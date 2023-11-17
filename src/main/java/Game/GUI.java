@@ -72,7 +72,7 @@ public class GUI extends JFrame {
 		JerryLocation jerry = new JerryLocation(s, e, this, 500);
 		this.addKeyListener((KeyListener) new KeyboardListener());
 
-		TomLocation tom = new TomLocation(s,e,this,500);
+		TomLocation tom = new TomLocation(e,this,500);
 
 		timer.schedule(new TimerTask() {
 			@Override
