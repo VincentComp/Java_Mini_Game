@@ -1,6 +1,8 @@
 package Game;
 
-
+/**
+ * A class for updating the position of Jerry
+ */
 public class JerryLocation{
     static int[][] maze;
     static GUI gui;
@@ -48,9 +50,10 @@ public class JerryLocation{
      * If the target position is not a wall, Jerry will move and check if it meets end game conditions
      */
     public static void clicked(){
-        if(!checkWall())
+        if(!checkWall()) {
             move();
             TomLocation.checkEndGame();
+        }
     }
 
     /**

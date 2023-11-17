@@ -10,6 +10,9 @@ import java.io.File;
 import java.io.Reader;
 import java.util.Timer;
 
+/**
+ * A class for updating the position of Tom
+ */
 public class TomLocation{
     static int[][] maze;
     static GUI gui;
