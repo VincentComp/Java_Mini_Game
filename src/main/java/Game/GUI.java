@@ -39,7 +39,14 @@ public class GUI extends JFrame {
 	 * @param maze the 30*30 game map
 	 */
 	public GUI(int[][] maze) {	//constructor 1
-		this.maze = maze;
+		// Deep copy maze array
+		this.maze = new int[MAZE_SIZE][MAZE_SIZE];
+		for(int i=0; i < MAZE_SIZE; i++) {
+			this.maze[i] = new int[maze[i].length];
+			for (int j = 0; j < MAZE_SIZE; j++)
+				this.maze[i][j] = maze[i][j];
+		}
+
 		cell = new JPanel[30][30];
 		setLayout(new GridLayout(30, 30));
 		pack();
@@ -60,7 +67,13 @@ public class GUI extends JFrame {
 	public GUI(int[][] maze, Tuple s, Tuple e){	//constructor 2
 		Jerry_lock =0;
 		Tom_lock = 0;
-		this.maze = maze;
+		// Deep copy maze array
+		this.maze = new int[MAZE_SIZE][MAZE_SIZE];
+		for(int i=0; i < MAZE_SIZE; i++) {
+			this.maze[i] = new int[maze[i].length];
+			for (int j = 0; j < MAZE_SIZE; j++)
+				this.maze[i][j] = maze[i][j];
+		}
 		cell = new JPanel[30][30];
 		setLayout(new GridLayout(30, 30));
 		pack();
