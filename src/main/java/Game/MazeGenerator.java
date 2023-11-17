@@ -48,10 +48,7 @@ public class MazeGenerator {
             }
 
             System.out.println("CSV file created successfully.");
-        } catch (IOException e) {
-            System.out.println("Error writing CSV file: " + e.getMessage());
-        }
-
+        } catch (IOException e) {}
     }
 
     /**
