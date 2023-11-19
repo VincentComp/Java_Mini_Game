@@ -169,7 +169,7 @@ public class TomLocation{
 
         MainGame.f1.revalidate();
         MainGame.f1.repaint();}catch(Exception e){
-            System.out.println("It may has runtime excpeiton");
+            //System.out.println("It may has runtime excpeiton");
         }
     }
 
