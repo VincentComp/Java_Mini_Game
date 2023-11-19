@@ -73,7 +73,7 @@ public class TomLocation{
 
             //Just for debug
             if(x ==0 && y==0){
-                GUI.cell[0][0].setBackground(Color.RED);
+                //GUI.cell[0][0].setBackground(Color.RED);
 
                 Tuple EndLocation = new Tuple(0,0);
 

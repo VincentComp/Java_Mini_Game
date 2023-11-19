@@ -388,12 +388,15 @@ public class TestAll {
     @Test
     void TestPlayerWin(){
         MainGame.f1 = new GUI(m.getMaze(), new Tuple(0,0), new Tuple(0,0));
+
         TomLocation.playerWins(); //target function
     }
 
     @Test
     void TestPlayerLoses(){
+        MainGame.f1 = null;
         TomLocation.playerLoses(); //target function
+
         MainGame.f1 = new GUI(m.getMaze(), new Tuple(0,0), new Tuple(0,0));
         TomLocation.playerLoses(); //target function
 
@@ -409,9 +412,6 @@ public class TestAll {
         KeyboardListener kbl = new KeyboardListener();
         kbl.keyPressed(k1); //Target Function
 
-        keyCode = KeyEvent.VK_DOWN;
-        k1 = new KeyEvent(MainGame.f1, KeyEvent.KEY_PRESSED, System.currentTimeMillis(), 0, keyCode, KeyEvent.CHAR_UNDEFINED);
-        kbl.keyPressed(k1); //Target Function
 
         keyCode = KeyEvent.VK_LEFT;
         k1 = new KeyEvent(MainGame.f1, KeyEvent.KEY_PRESSED, System.currentTimeMillis(), 0, keyCode, KeyEvent.CHAR_UNDEFINED);
@@ -421,6 +421,9 @@ public class TestAll {
         k1 = new KeyEvent(MainGame.f1, KeyEvent.KEY_PRESSED, System.currentTimeMillis(), 0, keyCode, KeyEvent.CHAR_UNDEFINED);
         kbl.keyPressed(k1); //Target Function
 
+        keyCode = KeyEvent.VK_DOWN;
+        k1 = new KeyEvent(MainGame.f1, KeyEvent.KEY_PRESSED, System.currentTimeMillis(), 0, keyCode, KeyEvent.CHAR_UNDEFINED);
+        kbl.keyPressed(k1); //Target Function
 
     }
 

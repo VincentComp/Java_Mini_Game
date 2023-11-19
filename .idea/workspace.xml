@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fa17fac-b429-4f72-969c-0409557ac260" name="Changes" comment="error in checkout(so commit)">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Game/Test2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Game/TestAll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="2fa17fac-b429-4f72-969c-0409557ac260" name="Changes" comment="Test Almost done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shortest path.csv" beforeDir="false" afterPath="$PROJECT_DIR$/shortest path.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/MainGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/MainGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/MazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/MazeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/ShortestPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/ShortestPath.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game/TomLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/TomLocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Game/TestAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Game/TestAll.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +157,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699194192245</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Test Almost done">
+      <option name="closed" value="true" />
+      <created>1700400462373</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1700400462373</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Test Almost done">
+      <option name="closed" value="true" />
+      <created>1700400503126</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1700400503126</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -219,14 +229,15 @@
     <MESSAGE value="FunctionB :: Map" />
     <MESSAGE value="Finished testing pull" />
     <MESSAGE value="error in checkout(so commit)" />
-    <option name="LAST_COMMIT_MESSAGE" value="error in checkout(so commit)" />
+    <MESSAGE value="Test Almost done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test Almost done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Game/MainGame.java</url>
-          <line>72</line>
+          <line>69</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
@@ -242,7 +253,7 @@
     <SUITE FILE_PATH="coverage/Comp3111F23G18$TestAll.ic" NAME="TestAll Coverage Results" MODIFIED="1699954245192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Game.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Project$TestAll.ic" NAME="TestAll Coverage Results" MODIFIED="1700399641376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Project$TestAll.ic" NAME="TestAll Coverage Results" MODIFIED="1700401888004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Game.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Project$FuncATestMain.ic" NAME="FuncATestMain Coverage Results" MODIFIED="1700239784418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
