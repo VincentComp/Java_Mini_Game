@@ -18,9 +18,10 @@ public class MainGame extends JFrame implements ActionListener {
 
     public static GUI f1;
 
-    private int button1_lock = 0;
-    private int button2_lock = 0;
-    private int button3_lock = 0;
+    public int button1_lock = 0;
+    public int button2_lock = 0;
+    public int button3_lock = 0;
+
     public MainGame() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400, 300);
@@ -50,6 +51,7 @@ public class MainGame extends JFrame implements ActionListener {
 
         // Add the cardPanel to the JFrame
         getContentPane().add(cardPanel);
+
     }
 
 

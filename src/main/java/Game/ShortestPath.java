@@ -15,7 +15,7 @@ public class ShortestPath {
     /**
      * An inner class to store the coordinate and direction of the current discovering vertex
      */
-    private static class Vertex {
+    public static class Vertex {
         public final int x;
         public final int y;
         public final Direction Dir;

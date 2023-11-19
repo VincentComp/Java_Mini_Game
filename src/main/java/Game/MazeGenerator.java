@@ -48,9 +48,7 @@ public class MazeGenerator {
             }
 
             System.out.println("CSV file created successfully.");
-        } catch (IOException e) {
-            System.out.println("Error writing CSV file: " + e.getMessage());
-        }
+        } catch (IOException e) {}
 
     }
 
@@ -105,7 +103,7 @@ public class MazeGenerator {
 
 
     // Check if next node is valid or not
-    private boolean validNextNode(Node node) {
+    public boolean validNextNode(Node node) {
         int numNeighboringOnes = 0;
         for (int y = node.y-1; y < node.y+2; y++) {
             for (int x = node.x-1; x < node.x+2; x++) {
@@ -118,7 +116,7 @@ public class MazeGenerator {
     }
 
     // Randomly push valid neighbors to the stack
-    private void randomlyAddNodesToStack(ArrayList<Node> nodes) {
+    public void randomlyAddNodesToStack(ArrayList<Node> nodes) {
         int targetIndex;
         while (!nodes.isEmpty()) {
             targetIndex = rand.nextInt(nodes.size());
@@ -127,7 +125,7 @@ public class MazeGenerator {
     }
 
     // Find valid neighbors and put them to an array list
-    private ArrayList<Node> findNeighbors(Node node) {
+    public ArrayList<Node> findNeighbors(Node node) {
         ArrayList<Node> neighbors = new ArrayList<>();
         for (int y = node.y-1; y < node.y+2; y++) {
             for (int x = node.x-1; x < node.x+2; x++) {
@@ -141,17 +139,17 @@ public class MazeGenerator {
     }
 
     // Check if the point is inside the maze
-    private Boolean pointOnGrid(int x, int y) {
+    public Boolean pointOnGrid(int x, int y) {
         return x > 0 && y > 0 && x < dimension-1 && y < dimension-1;
     }
 
     // Check if the point is NOT at a corner
-    private Boolean pointNotCorner(Node node, int x, int y) {
+    public Boolean pointNotCorner(Node node, int x, int y) {
         return (x == node.x || y == node.y);
     }
 
     // Check if a node is modified
-    private Boolean pointNotNode(Node node, int x, int y) {
+    public Boolean pointNotNode(Node node, int x, int y) {
         return !(x == node.x && y == node.y);
     }
 
