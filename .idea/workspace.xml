@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fa17fac-b429-4f72-969c-0409557ac260" name="Changes" comment="Test Almost done">
+    <list default="true" id="2fa17fac-b429-4f72-969c-0409557ac260" name="Changes" comment="Test done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shortest path.csv" beforeDir="false" afterPath="$PROJECT_DIR$/shortest path.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game/MainGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/MainGame.java" afterDir="false" />
@@ -181,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700402249512</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Test done">
+      <option name="closed" value="true" />
+      <created>1700404567918</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1700404567918</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -238,7 +246,8 @@
     <MESSAGE value="Finished testing pull" />
     <MESSAGE value="error in checkout(so commit)" />
     <MESSAGE value="Test Almost done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test Almost done" />
+    <MESSAGE value="Test done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test done" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Project$TestForA.ic" NAME="TestForA Coverage Results" MODIFIED="1700239809569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -250,7 +259,7 @@
     <SUITE FILE_PATH="coverage/Comp3111F23G18$TestAll.ic" NAME="TestAll Coverage Results" MODIFIED="1699954245192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Game.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Project$TestAll.ic" NAME="TestAll Coverage Results" MODIFIED="1700403976307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Project$TestAll.ic" NAME="TestAll Coverage Results" MODIFIED="1700404374332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Game.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Project$FuncATestMain.ic" NAME="FuncATestMain Coverage Results" MODIFIED="1700239784418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
