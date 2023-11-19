@@ -3,6 +3,7 @@ package Game;
 
 import com.sun.tools.javac.Main;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 
 import javax.swing.*;
@@ -443,7 +444,7 @@ public class TestAll {
         JButton source = new JButton("Function A: Maze Generator");
         ActionEvent event = new ActionEvent(source, ActionEvent.ACTION_PERFORMED, "Function A: Maze Generator");
         m.actionPerformed(event); //Target function
-
+        m.f3.dispatchEvent(new WindowEvent(m.f3, WindowEvent.WINDOW_CLOSING));
 
 
 
@@ -451,10 +452,12 @@ public class TestAll {
         source = new JButton("Function B: Shortest Path");
         event = new ActionEvent(source, ActionEvent.ACTION_PERFORMED, "Function B: Shortest Path");
         m.actionPerformed(event);//Target function
+        m.f2.dispatchEvent(new WindowEvent(m.f2, WindowEvent.WINDOW_CLOSING));
 
         source = new JButton("Function C: Have Fun and play");
         event = new ActionEvent(source, ActionEvent.ACTION_PERFORMED, "Function C: Have Fun and play");
         m.actionPerformed(event);//Target function
+        m.f1.dispatchEvent(new WindowEvent(m.f1, WindowEvent.WINDOW_CLOSING));
     }
 
     @Test
@@ -463,12 +466,6 @@ public class TestAll {
         String[] args = {"a","a"};
         MainGame.main(args); //target function
     }
-
-
-
-
-
-
 
 
 }

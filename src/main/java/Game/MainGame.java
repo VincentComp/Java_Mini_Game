@@ -16,7 +16,9 @@ public class MainGame extends JFrame implements ActionListener {
 
     private JPanel mainScene;
 
-    public static GUI f1;
+    public static GUI f1;//in fact this is button3
+    public static GUI f2;
+    public static GUI f3;//in fact this is button1
 
     public int button1_lock = 0;
     public int button2_lock = 0;
@@ -65,9 +67,9 @@ public class MainGame extends JFrame implements ActionListener {
                 mazeGenerator.generateMaze();
                 mazeGenerator.genCSV();
 
-                GUI frame = new GUI(mazeGenerator.getMaze());
-                frame.setTitle("Function A: Maze Generator");
-                frame.addWindowListener(new WindowAdapter() {
+                f3 = new GUI(mazeGenerator.getMaze());
+                f3.setTitle("Function A: Maze Generator");
+                f3.addWindowListener(new WindowAdapter() {
                     @Override
                     public void windowClosed(WindowEvent e) {
                         button1_lock = 0;
@@ -131,10 +133,10 @@ public class MainGame extends JFrame implements ActionListener {
 
                 } catch (IOException exception) {}
                 //GUI==========================
-                GUI frame = new GUI(maze);
-                frame.setTitle("Function B: Shortest Path");
+                f2 = new GUI(maze);
+                f2.setTitle("Function B: Shortest Path");
 
-                frame.addWindowListener(new WindowAdapter() {
+                f2.addWindowListener(new WindowAdapter() {
                     @Override
                     public void windowClosed(WindowEvent e) {
                         button2_lock = 0;
