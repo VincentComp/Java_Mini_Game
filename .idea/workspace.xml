@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shortest path.csv" beforeDir="false" afterPath="$PROJECT_DIR$/shortest path.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game/MainGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/MainGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game/TomLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/TomLocation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Game/TestAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Game/TestAll.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +39,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="FunctionB" />
+        <entry key="$PROJECT_DIR$" value="FunctionA" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -64,16 +65,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Master",
-    "run.code.analysis.last.selected.profile": "pProject Default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Master&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="FuncATestMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Game.FuncATestMain" />
@@ -103,6 +104,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GUI" />
+        <item itemvalue="Application.FuncATestMain" />
         <item itemvalue="Application.GUI" />
         <item itemvalue="Application.FuncATestMain" />
       </list>
@@ -259,7 +262,7 @@
     <SUITE FILE_PATH="coverage/Comp3111F23G18$TestAll.ic" NAME="TestAll Coverage Results" MODIFIED="1699954245192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Game.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Project$TestAll.ic" NAME="TestAll Coverage Results" MODIFIED="1700404374332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Project$TestAll.ic" NAME="TestAll Coverage Results" MODIFIED="1700629788799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Game.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Project$FuncATestMain.ic" NAME="FuncATestMain Coverage Results" MODIFIED="1700239784418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

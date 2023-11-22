@@ -438,8 +438,8 @@ public class TestAll {
     void TestMainGamebutton(){
         MainGame m = new MainGame();
         m.button1_lock = 0;
-        m.button2_lock = 0;
-        m.button3_lock = 0;
+        m.button2_lock = 1;
+        m.button3_lock = 1;
 
         JButton source = new JButton("Function A: Maze Generator");
         ActionEvent event = new ActionEvent(source, ActionEvent.ACTION_PERFORMED, "Function A: Maze Generator");
@@ -448,12 +448,19 @@ public class TestAll {
 
 
 
+        m.button1_lock = 1;
+        m.button2_lock = 0;
+        m.button3_lock = 1;
 
         source = new JButton("Function B: Shortest Path");
         event = new ActionEvent(source, ActionEvent.ACTION_PERFORMED, "Function B: Shortest Path");
         m.actionPerformed(event);//Target function
         m.f2.dispatchEvent(new WindowEvent(m.f2, WindowEvent.WINDOW_CLOSING));
 
+
+        m.button1_lock = 1;
+        m.button2_lock = 1;
+        m.button3_lock = 0;
         source = new JButton("Function C: Have Fun and play");
         event = new ActionEvent(source, ActionEvent.ACTION_PERFORMED, "Function C: Have Fun and play");
         m.actionPerformed(event);//Target function

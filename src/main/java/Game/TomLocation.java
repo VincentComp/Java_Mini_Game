@@ -160,11 +160,21 @@ public class TomLocation{
 
         MainGame.f1.setContentPane(panel);
         MainGame.f1.getContentPane().removeAll();
-        MainGame.f1.getContentPane().setBackground(Color.ORANGE);
-        JLabel label = new JLabel("You Win", SwingConstants.CENTER);
-        label.setFont(new Font("Serif", Font.BOLD, 100));
-        MainGame.f1.getContentPane().add(label);
+        //MainGame.f1.getContentPane().setBackground(Color.ORANGE);
+        //JLabel label = new JLabel("You Win", SwingConstants.CENTER);
+        //label.setFont(new Font("Serif", Font.BOLD, 100));
+        //MainGame.f1.getContentPane().add(label);
 
+            //Add Image
+            MainGame.f1.setResizable(false);
+            ImageIcon imageIcon = new ImageIcon("Win.png"); // load the image to a imageIcon
+            Image image = imageIcon.getImage(); // transform it
+            Image newimg = image.getScaledInstance(600, 600,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way
+            imageIcon = new ImageIcon(newimg);  // transform it back
+            JLabel background = new JLabel(imageIcon);
+
+            MainGame.f1.getContentPane().add(background);
+            //Add Image
 
 
         MainGame.f1.revalidate();
@@ -191,11 +201,22 @@ public class TomLocation{
             JPanel panel = new JPanel();
             MainGame.f1.setContentPane(panel);
             MainGame.f1.getContentPane().removeAll();
-            MainGame.f1.getContentPane().setBackground(Color.BLUE);
-            JLabel label = new JLabel("You lose", SwingConstants.CENTER);
-            label.setFont(new Font("Serif", Font.BOLD, 100));
-            label.setForeground(Color.WHITE);
-            MainGame.f1.getContentPane().add(label);
+            //MainGame.f1.getContentPane().setBackground(Color.BLUE);
+            //JLabel label = new JLabel("You lose", SwingConstants.CENTER);
+            //label.setFont(new Font("Serif", Font.BOLD, 100));
+            //label.setForeground(Color.WHITE);
+            //MainGame.f1.getContentPane().add(label);
+
+            //Add Image
+            MainGame.f1.setResizable(false);
+            ImageIcon imageIcon = new ImageIcon("Lose.png"); // load the image to a imageIcon
+            Image image = imageIcon.getImage(); // transform it
+            Image newimg = image.getScaledInstance(600, 600,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way
+            imageIcon = new ImageIcon(newimg);  // transform it back
+            JLabel background = new JLabel(imageIcon);
+
+            MainGame.f1.getContentPane().add(background);
+            //Add Image
 
 
             MainGame.f1.revalidate();
