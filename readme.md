@@ -28,7 +28,7 @@ This is a 2D mazes chasing game featuring the theme Tom and Jerry. This game is 
   * 2.3 "Function C: Has fun and play"
     * 2.3.1 After Clicking this button, you will see the 30*30 2D maze is generated together with 2 chracters <br> i.e. {Blue square: Tom, Orange square: Jerry}
     * 2.3.2 After 1 Second, Tom(Blue) would start chasing Jerry(Orange)
-    * 2.3.3 You have to control Jerry(Orange) to escape from Tom and arrive the exit
+    * 2.3.3 You have to control Jerry(Orange) with **arrow keys** to escape from Tom and arrive the exit
     * 2.3.4 If you arrived the exit, a win screen will be shown
     <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
     If you are caught by Tom, a lose screen will be shown
