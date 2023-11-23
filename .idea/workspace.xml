@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fa17fac-b429-4f72-969c-0409557ac260" name="Changes" comment="Test done">
+    <list default="true" id="2fa17fac-b429-4f72-969c-0409557ac260" name="Changes" comment="Add image">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shortest path.csv" beforeDir="false" afterPath="$PROJECT_DIR$/shortest path.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game/MainGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/MainGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game/TomLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game/TomLocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Game/TestAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Game/TestAll.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +190,23 @@
       <option name="project" value="LOCAL" />
       <updated>1700404567918</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Test done">
+      <option name="closed" value="true" />
+      <created>1700636532164</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1700636532165</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add image">
+      <option name="closed" value="true" />
+      <created>1700650793262</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1700650793263</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -250,7 +264,8 @@
     <MESSAGE value="error in checkout(so commit)" />
     <MESSAGE value="Test Almost done" />
     <MESSAGE value="Test done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test done" />
+    <MESSAGE value="Add image" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add image" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Project$TestForA.ic" NAME="TestForA Coverage Results" MODIFIED="1700239809569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -262,7 +277,7 @@
     <SUITE FILE_PATH="coverage/Comp3111F23G18$TestAll.ic" NAME="TestAll Coverage Results" MODIFIED="1699954245192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Game.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Project$TestAll.ic" NAME="TestAll Coverage Results" MODIFIED="1700629788799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Project$TestAll.ic" NAME="TestAll Coverage Results" MODIFIED="1700719025522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Game.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Project$FuncATestMain.ic" NAME="FuncATestMain Coverage Results" MODIFIED="1700239784418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

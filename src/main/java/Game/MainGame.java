@@ -43,6 +43,7 @@ public class MainGame extends JFrame implements ActionListener {
             // Set the frame size and position
             setSize(frameWidth, frameHeight);
             setLocation(centerX, centerY);
+            setResizable(false);
         }catch(Exception e){}
         //===============Set Window===============
 
