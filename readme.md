@@ -36,6 +36,6 @@ This is a 2D mazes chasing game featuring the theme Tom and Jerry. This game is 
 
 
 ## Important Notes
-1. To prevent user from open many window, we has restricted **at most 2 windows** (including the menu) can exist at a time. In other words, **please close the new window before opening another new window**. 
+1. To prevent interference between different windows, we has restricted **at most 2 windows** (including the menu) can exist at a time. In other words, **please close the new window before opening another new window**. 
 2. We assume that the leftmost Vertex is always the entry point, while righmost Vertex is always the exit point**
 3. The size of the window has been fixed 
