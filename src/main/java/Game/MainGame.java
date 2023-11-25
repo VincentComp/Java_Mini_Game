@@ -173,7 +173,7 @@ public class MainGame extends JFrame implements ActionListener {
                         StartLocation = new Tuple(0, j);
                     }
 
-                    else if(maze[j][29] == 0){
+                    if(maze[j][29] == 0){
                         EndLocation = new Tuple(29, j);
                     }
                 }
