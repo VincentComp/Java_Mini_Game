@@ -20,7 +20,7 @@ This is a 2D mazes chasing game featuring the theme Tom and Jerry. This game is 
 
 
    * 2.2 "Function B: Shortest Path"
-     * 2.2.1 Similar to "Function A",  after clicking this button, you will see a 30*30 2D maze (stored in  **"shortest path.csv"**) is generated and 
+     * 2.2.1 Similar to "Function A",  after clicking this button, you will see a 30*30 2D maze (stored in  **"shortest path.csv"** (row,col)) is generated and 
      * 2.2.2 There is a yellow path connecting the entry point and the exit point, which indicates the shortest path from the entry to the exit
      * 2.2.3 Close the window to continue
 
