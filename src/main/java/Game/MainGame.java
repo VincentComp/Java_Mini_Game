@@ -241,7 +241,7 @@ public class MainGame extends JFrame implements ActionListener {
                         maze.getMaze()[j][0] = 3;
                     }
 
-                    else if(maze.getMaze()[j][29] == 0){
+                    if(maze.getMaze()[j][29] == 0){
                         EndLocation = new Tuple(29, j);
                         maze.getMaze()[j][29] = 2;
                     }
