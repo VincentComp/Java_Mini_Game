@@ -1,5 +1,5 @@
 # MAZE ESCAPE: Jerry v.s Tom
-
+<img src = "https://github.com/VincentComp/Comp3111F23G18/blob/Master/Team%20Formation.png">
 
 ## Introduction
 This is a 2D mazes chasing game featuring the theme Tom and Jerry. This game is designed by the Comp3111 2023Fall Group 18. 
